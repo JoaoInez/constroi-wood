@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Bath } from "styled-icons/fa-solid/Bath";
 import { PaintRoller } from "styled-icons/fa-solid/PaintRoller";
 import { Hammer } from "styled-icons/fa-solid/Hammer";
-import { RightArrow } from "styled-icons/boxicons-solid/RightArrow";
-import { LeftArrow } from "styled-icons/boxicons-solid/LeftArrow";
 import portfolio from "../data/portfolio.json";
 import { H, P } from "../components/Typography";
 import { Button } from "../components/Buttons";
@@ -94,30 +92,6 @@ const ProjectsSection = styled.section`
   padding: 20px 0 50px 0;
 `;
 
-const ProjectsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-`;
-
-const ArrowButton = css`
-  position: absolute;
-  height: 20px;
-  top: calc(50% - 10px);
-  cursor: pointer;
-`;
-
-const LeftArrowButton = styled(LeftArrow)`
-  ${ArrowButton}
-  left: 5px;
-`;
-
-const RightArrowButton = styled(RightArrow)`
-  ${ArrowButton}
-  right: 5px;
-`;
-
 const WideCard = styled.div`
   border-radius: 4px;
   overflow: hidden;
@@ -189,35 +163,6 @@ const home = () => {
       length: remodeling.length
     }
   });
-
-  const changeProjectFocus = (dir, cat) => () => {
-    if (dir === "left") {
-      const newFocused =
-        projects[cat].focused - 1 >= 0
-          ? projects[cat].focused - 1
-          : portfolio[cat].length - 1;
-      setProjects({
-        ...projects,
-        [cat]: {
-          ...projects[cat],
-          focused: newFocused,
-          dir
-        }
-      });
-    } else if (dir === "right") {
-      const newFocused =
-        projects[cat].focused + 1 <= portfolio[cat].length - 1
-          ? projects[cat].focused + 1
-          : 0;
-      setProjects({
-        ...projects,
-        [cat]: {
-          ...projects[cat],
-          focused: newFocused
-        }
-      });
-    }
-  };
 
   return (
     <>
@@ -299,70 +244,38 @@ const home = () => {
       <ProjectsSection>
         <H>Portfolio</H>
         <Divider width="33%" margin="0 0 30px 0" />
-        <H h={3}>Carpintaria</H>
-        <ProjectsWrapper>
-          <LeftArrowButton onClick={changeProjectFocus("left", "carpentry")} />
-          <RightArrowButton
-            onClick={changeProjectFocus("right", "carpentry")}
-          />
-          {carpentry.map(({ title, description, image }, i) => (
-            <WideCard key={i} focused={projects.carpentry.focused} index={i}>
-              <Row maxWidth="1000px">
-                <Col sm={1} md={1} lg={1}>
-                  <ProjectImage url={`url(${image})`} />
-                </Col>
-                <Col sm={1} md={2} lg={2} justify="center">
-                  <ProjectContent>
-                    <H h={4}>{title}</H>
-                    <P>{description}</P>
-                  </ProjectContent>
-                </Col>
-              </Row>
-            </WideCard>
-          ))}
-        </ProjectsWrapper>
-        <H h={3}>Pinturas</H>
-        <ProjectsWrapper>
-          <LeftArrowButton onClick={changeProjectFocus("left", "painting")} />
-          <RightArrowButton onClick={changeProjectFocus("right", "painting")} />
-          {painting.map(({ title, description, image }, i) => (
-            <WideCard key={i} focused={projects.painting.focused} index={i}>
-              <Row maxWidth="1000px">
-                <Col sm={1} md={1} lg={1}>
-                  <ProjectImage url={`url(${image})`} />
-                </Col>
-                <Col sm={1} md={2} lg={2} justify="center">
-                  <ProjectContent>
-                    <H h={4}>{title}</H>
-                    <P>{description}</P>
-                  </ProjectContent>
-                </Col>
-              </Row>
-            </WideCard>
-          ))}
-        </ProjectsWrapper>
-        <H h={3}>Remodelações</H>
-        <ProjectsWrapper>
-          <LeftArrowButton onClick={changeProjectFocus("left", "remodeling")} />
-          <RightArrowButton
-            onClick={changeProjectFocus("right", "remodeling")}
-          />
-          {remodeling.map(({ title, description, image }, i) => (
-            <WideCard key={i} focused={projects.remodeling.focused} index={i}>
-              <Row maxWidth="1000px">
-                <Col sm={1} md={1} lg={1}>
-                  <ProjectImage url={`url(${image})`} />
-                </Col>
-                <Col sm={1} md={2} lg={2} justify="center">
-                  <ProjectContent>
-                    <H h={4}>{title}</H>
-                    <P>{description}</P>
-                  </ProjectContent>
-                </Col>
-              </Row>
-            </WideCard>
-          ))}
-        </ProjectsWrapper>
+        <WideCard>
+          <Row maxWidth="1000px">
+            <Col sm={1} md={1} lg={1}>
+              <ProjectImage url="url(/static/eva-faro.jpeg)" />
+            </Col>
+            <Col sm={1} md={2} lg={2} justify="center">
+              <ProjectContent>
+                <H h={4}>Hotel Eva</H>
+                <P>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </P>
+              </ProjectContent>
+            </Col>
+          </Row>
+        </WideCard>
+        <WideCard>
+          <Row maxWidth="1000px">
+            <Col sm={1} md={1} lg={1}>
+              <ProjectImage url="url(/static/hotel-tivoli.jpg)" />
+            </Col>
+            <Col sm={1} md={2} lg={2} justify="center">
+              <ProjectContent>
+                <H h={4}>Hotel Tivoli</H>
+                <P>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </P>
+              </ProjectContent>
+            </Col>
+          </Row>
+        </WideCard>
       </ProjectsSection>
     </>
   );
