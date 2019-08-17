@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Bath } from "styled-icons/boxicons-regular/Bath";
-import { PaintRoll } from "styled-icons/boxicons-regular/PaintRoll";
-import { Wrench } from "styled-icons/boxicons-regular/Wrench";
+import { Bath } from "styled-icons/fa-solid/Bath";
+import { PaintRoller } from "styled-icons/fa-solid/PaintRoller";
+import { Hammer } from "styled-icons/fa-solid/Hammer";
+import portfolio from "../data/portfolio.json";
 import { H, P } from "../components/Typography";
 import { Button } from "../components/Buttons";
 import { Row, Col } from "../components/Grid";
@@ -32,6 +33,10 @@ const ImageContent = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  ${P} {
+    margin: 0 20px;
+  }
 `;
 
 const Title = styled(H)`
@@ -45,12 +50,12 @@ const ServicesSection = styled.section`
   padding: 20px 0 50px 0;
 `;
 
-const WrenchIcon = styled(Wrench)`
+const HammerIcon = styled(Hammer)`
   width: 50px;
   height: auto;
 `;
 
-const PaintRollIcon = styled(PaintRoll)`
+const PaintRollerIcon = styled(PaintRoller)`
   width: 50px;
   height: auto;
 `;
@@ -66,19 +71,13 @@ const Divider = styled.hr`
   margin: ${({ margin = "10px 0" }) => margin};
 `;
 
-const VerticalDivider = styled.hr`
-  border: 1px solid ${({ theme, color = "grey" }) => theme[color]};
-  width: 0;
-  height: ${({ height = "100px" }) => height};
-  margin: ${({ margin = "10px auto" }) => margin};
-`;
-
 const Card = styled.div`
   margin: 30px 10px;
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   box-shadow: 0 2px 8px #f0f1f2;
   border-radius: 0 6px 6px 6px;
   overflow: hidden;
@@ -93,6 +92,14 @@ const ProjectsSection = styled.section`
   padding: 20px 0 50px 0;
 `;
 
+const WideCard = styled.div`
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #f0f1f2;
+  margin: 20px 40px;
+  display: ${({ index, focused }) => (index === focused ? "initial" : "none")};
+`;
+
 const ProjectImage = styled.div`
   background-image: ${({ url }) => url};
   background-repeat: no-repeat;
@@ -103,14 +110,7 @@ const ProjectImage = styled.div`
   width: 100%;
 `;
 
-const WideCard = styled.div`
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px #f0f1f2;
-  margin: 20px;
-`;
-
-const ProjectWrapper = styled.div`
+const ProjectContent = styled.div`
   padding: 10px 40px;
   min-width: 200px;
 `;
@@ -140,110 +140,145 @@ const AboutContent = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  ${P} {
+    margin: 0 20px;
+  }
 `;
 
-const home = () => (
-  <>
-    <ImageSection>
-      <ImageBackground />
-      <ImageContent>
-        <Title color="white">Sample title</Title>
-        <Divider width="100px" color="white" margin="0 0 30px 0" />
-        <P color="white" align="center" width="600px">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </P>
-        <Button color="white" size="lg" margin="30px 0" bgColor="white" outline>
-          Contactos
-        </Button>
-      </ImageContent>
-    </ImageSection>
-    <ServicesSection>
-      <H>Serviços</H>
-      <Divider width="33%" margin="0 0 30px 0" />
-      <Row maxWidth="1000px">
-        <Col flex justify="center">
-          <Card>
-            <WrenchIcon />
-            <H h={4}>Title</H>
-            <P align="center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </P>
-          </Card>
-        </Col>
-        <Col flex justify="center">
-          <Card>
-            <PaintRollIcon />
-            <H h={4}>Title</H>
-            <P align="center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </P>
-          </Card>
-        </Col>
-        <Col flex justify="center">
-          <Card>
-            <BathIcon />
-            <H h={4}>Title</H>
-            <P align="center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </P>
-          </Card>
-        </Col>
-      </Row>
-    </ServicesSection>
-    <AboutSection>
-      <AboutBackground />
-      <AboutContent>
-        <P color="white" width="500px">
-          <i>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          </i>
-        </P>
-      </AboutContent>
-    </AboutSection>
-    <ProjectsSection>
-      <H>Portfolio</H>
-      <Divider width="33%" margin="0 0 30px 0" />
-      <WideCard>
+const home = () => {
+  const { carpentry, painting, remodeling } = portfolio;
+
+  const [projects, setProjects] = useState({
+    carpentry: {
+      focused: 0,
+      length: carpentry.length
+    },
+    painting: {
+      focused: 0,
+      length: painting.length
+    },
+    remodeling: {
+      focused: 0,
+      length: remodeling.length
+    }
+  });
+
+  return (
+    <>
+      <ImageSection>
+        <ImageBackground />
+        <ImageContent>
+          <Title color="white">Sample title</Title>
+          <Divider width="100px" color="white" margin="0 0 30px 0" />
+          <P color="white" align="center" width="600px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </P>
+          <Button
+            color="white"
+            size="lg"
+            margin="30px 0"
+            bgColor="white"
+            outline
+          >
+            Contactos
+          </Button>
+        </ImageContent>
+      </ImageSection>
+      <ServicesSection>
+        <H>Serviços</H>
+        <Divider width="33%" margin="0 0 30px 0" />
         <Row maxWidth="1000px">
-          <Col sm={1} md={1} lg={1}>
-            <ProjectImage url="url(/static/eva-faro.jpeg)" />
-          </Col>
-          <Col sm={1} md={2} lg={2} justify="center">
-            <ProjectWrapper>
-              <H h={4}>Hotel Eva</H>
-              <P>
+          <Col flex justify="center">
+            <Card>
+              <HammerIcon />
+              <H h={4} align="center">
+                Carpintaria
+              </H>
+              <P align="center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </P>
-            </ProjectWrapper>
+            </Card>
           </Col>
-        </Row>
-      </WideCard>
-      <WideCard>
-        <Row maxWidth="1000px">
-          <Col sm={1} md={1} lg={1}>
-            <ProjectImage url="url(/static/hotel-tivoli.jpg)" />
-          </Col>
-          <Col sm={1} md={2} lg={2} justify="center">
-            <ProjectWrapper>
-              <H h={4}>Hotel Tivoli</H>
-              <P>
+          <Col flex justify="center">
+            <Card>
+              <PaintRollerIcon />
+              <H h={4} align="center">
+                Pinturas
+              </H>
+              <P align="center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </P>
-            </ProjectWrapper>
+            </Card>
+          </Col>
+          <Col flex justify="center">
+            <Card>
+              <BathIcon />
+              <H h={4} align="center">
+                Remodelações
+              </H>
+              <P align="center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </P>
+            </Card>
           </Col>
         </Row>
-      </WideCard>
-    </ProjectsSection>
-  </>
-);
+      </ServicesSection>
+      <AboutSection>
+        <AboutBackground />
+        <AboutContent>
+          <P color="white" width="500px">
+            <i>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            </i>
+          </P>
+        </AboutContent>
+      </AboutSection>
+      <ProjectsSection>
+        <H>Portfolio</H>
+        <Divider width="33%" margin="0 0 30px 0" />
+        <WideCard>
+          <Row maxWidth="1000px">
+            <Col sm={1} md={1} lg={1}>
+              <ProjectImage url="url(/static/eva-faro.jpeg)" />
+            </Col>
+            <Col sm={1} md={2} lg={2} justify="center">
+              <ProjectContent>
+                <H h={4}>Hotel Eva</H>
+                <P>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </P>
+              </ProjectContent>
+            </Col>
+          </Row>
+        </WideCard>
+        <WideCard>
+          <Row maxWidth="1000px">
+            <Col sm={1} md={1} lg={1}>
+              <ProjectImage url="url(/static/hotel-tivoli.jpg)" />
+            </Col>
+            <Col sm={1} md={2} lg={2} justify="center">
+              <ProjectContent>
+                <H h={4}>Hotel Tivoli</H>
+                <P>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </P>
+              </ProjectContent>
+            </Col>
+          </Row>
+        </WideCard>
+      </ProjectsSection>
+    </>
+  );
+};
 
 export default home;

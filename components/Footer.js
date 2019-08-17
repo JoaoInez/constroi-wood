@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { At } from "styled-icons/boxicons-regular/At";
 import { Phone } from "styled-icons/boxicons-regular/Phone";
-import { Location } from "styled-icons/icomoon/Location";
 import { P } from "./Typography";
 
 const SFooter = styled.footer`
@@ -32,11 +31,6 @@ const PhoneIcon = styled(Phone)`
   margin-right: 10px;
 `;
 
-const LocationIcon = styled(Location)`
-  width: 25px;
-  margin-right: 10px;
-`;
-
 const Footer = () => (
   <SFooter>
     <Content>
@@ -47,13 +41,6 @@ const Footer = () => (
       <Info>
         <PhoneIcon />
         <P color="white">+351 912 345 678</P>
-      </Info>
-      <Info>
-        <LocationIcon />
-        <P color="white">
-          Vale da Venda, Estrada nacional nº 125 – nº 273
-          <br /> 8135 – 032 Almancil, Faro
-        </P>
       </Info>
     </Content>
   </SFooter>

@@ -13,6 +13,7 @@ const H = styled.h1`
       : h === 1
       ? "2rem"
       : "2rem"};
+  text-align: ${({ align = "initial" }) => align};
 `;
 
 const P = styled.p`
