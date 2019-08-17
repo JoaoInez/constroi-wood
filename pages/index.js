@@ -52,17 +52,14 @@ const ServicesSection = styled.section`
 
 const HammerIcon = styled(Hammer)`
   width: 50px;
-  height: auto;
 `;
 
 const PaintRollerIcon = styled(PaintRoller)`
   width: 50px;
-  height: auto;
 `;
 
 const BathIcon = styled(Bath)`
   width: 50px;
-  height: auto;
 `;
 
 const Divider = styled.hr`
