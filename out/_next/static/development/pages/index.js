@@ -748,7 +748,7 @@ __webpack_require__.r(__webpack_exports__);
 var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "Grid__Row",
   componentId: "cyd3bg-0"
-})(["display:flex;flex-wrap:wrap;flex-direction:", ";width:", ";max-width:", ";"], function (_ref) {
+})(["display:flex;flex-wrap:wrap;flex-direction:", ";width:", ";max-width:", ";margin:", ";"], function (_ref) {
   var _ref$column = _ref.column,
       column = _ref$column === void 0 ? false : _ref$column;
   return column ? "column" : "row";
@@ -760,64 +760,72 @@ var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConf
   var _ref3$maxWidth = _ref3.maxWidth,
       maxWidth = _ref3$maxWidth === void 0 ? "initial" : _ref3$maxWidth;
   return maxWidth;
+}, function (_ref4) {
+  var _ref4$margin = _ref4.margin,
+      margin = _ref4$margin === void 0 ? 0 : _ref4$margin;
+  return margin;
 });
 var Col = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "Grid__Col",
   componentId: "cyd3bg-1"
-})(["align-items:", ";justify-content:", ";flex-direction:", ";padding:", ";@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}"], function (_ref4) {
-  var _ref4$align = _ref4.align,
-      align = _ref4$align === void 0 ? "initial" : _ref4$align;
+})(["align-items:", ";justify-content:", ";flex-direction:", ";padding:", ";min-width:", ";@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}"], function (_ref5) {
+  var _ref5$align = _ref5.align,
+      align = _ref5$align === void 0 ? "initial" : _ref5$align;
   return align;
-}, function (_ref5) {
-  var _ref5$justify = _ref5.justify,
-      justify = _ref5$justify === void 0 ? "initial" : _ref5$justify;
-  return justify;
 }, function (_ref6) {
-  var _ref6$column = _ref6.column,
-      column = _ref6$column === void 0 ? false : _ref6$column;
-  return column ? "column" : "initial";
+  var _ref6$justify = _ref6.justify,
+      justify = _ref6$justify === void 0 ? "initial" : _ref6$justify;
+  return justify;
 }, function (_ref7) {
-  var _ref7$padding = _ref7.padding,
-      padding = _ref7$padding === void 0 ? 0 : _ref7$padding;
-  return padding;
+  var _ref7$column = _ref7.column,
+      column = _ref7$column === void 0 ? false : _ref7$column;
+  return column ? "column" : "initial";
 }, function (_ref8) {
-  var media = _ref8.theme.media;
-  return media.mobile;
+  var _ref8$padding = _ref8.padding,
+      padding = _ref8$padding === void 0 ? 0 : _ref8$padding;
+  return padding;
 }, function (_ref9) {
-  var _ref9$sm = _ref9.sm,
-      sm = _ref9$sm === void 0 ? 1 : _ref9$sm;
-  return sm;
+  var _ref9$minWidth = _ref9.minWidth,
+      minWidth = _ref9$minWidth === void 0 ? "initial" : _ref9$minWidth;
+  return minWidth;
 }, function (_ref10) {
-  var _ref10$sm = _ref10.sm,
-      sm = _ref10$sm === void 0 ? 1 : _ref10$sm,
-      _ref10$flex = _ref10.flex,
-      flex = _ref10$flex === void 0 ? false : _ref10$flex;
-  return sm === 0 ? "none" : flex ? "flex" : "initial";
+  var media = _ref10.theme.media;
+  return media.mobile;
 }, function (_ref11) {
-  var media = _ref11.theme.media;
-  return media.laptop;
+  var _ref11$sm = _ref11.sm,
+      sm = _ref11$sm === void 0 ? 1 : _ref11$sm;
+  return sm;
 }, function (_ref12) {
-  var _ref12$md = _ref12.md,
-      md = _ref12$md === void 0 ? 1 : _ref12$md;
-  return md;
+  var _ref12$sm = _ref12.sm,
+      sm = _ref12$sm === void 0 ? 1 : _ref12$sm,
+      _ref12$flex = _ref12.flex,
+      flex = _ref12$flex === void 0 ? false : _ref12$flex;
+  return sm === 0 ? "none" : flex ? "flex" : "initial";
 }, function (_ref13) {
-  var _ref13$md = _ref13.md,
-      md = _ref13$md === void 0 ? 1 : _ref13$md,
-      _ref13$flex = _ref13.flex,
-      flex = _ref13$flex === void 0 ? false : _ref13$flex;
-  return md === 0 ? "none" : flex ? "flex" : "initial";
+  var media = _ref13.theme.media;
+  return media.laptop;
 }, function (_ref14) {
-  var media = _ref14.theme.media;
-  return media.desktop;
+  var _ref14$md = _ref14.md,
+      md = _ref14$md === void 0 ? 1 : _ref14$md;
+  return md;
 }, function (_ref15) {
-  var _ref15$lg = _ref15.lg,
-      lg = _ref15$lg === void 0 ? 1 : _ref15$lg;
-  return lg;
+  var _ref15$md = _ref15.md,
+      md = _ref15$md === void 0 ? 1 : _ref15$md,
+      _ref15$flex = _ref15.flex,
+      flex = _ref15$flex === void 0 ? false : _ref15$flex;
+  return md === 0 ? "none" : flex ? "flex" : "initial";
 }, function (_ref16) {
-  var _ref16$lg = _ref16.lg,
-      lg = _ref16$lg === void 0 ? 1 : _ref16$lg,
-      _ref16$flex = _ref16.flex,
-      flex = _ref16$flex === void 0 ? false : _ref16$flex;
+  var media = _ref16.theme.media;
+  return media.desktop;
+}, function (_ref17) {
+  var _ref17$lg = _ref17.lg,
+      lg = _ref17$lg === void 0 ? 1 : _ref17$lg;
+  return lg;
+}, function (_ref18) {
+  var _ref18$lg = _ref18.lg,
+      lg = _ref18$lg === void 0 ? 1 : _ref18$lg,
+      _ref18$flex = _ref18.flex,
+      flex = _ref18$flex === void 0 ? false : _ref18$flex;
   return lg === 0 ? "none" : flex ? "flex" : "initial";
 });
 
@@ -14675,7 +14683,7 @@ var index = function index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjoaoinez%2FDocuments%2FProjects%2FConstroiWood%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************/
@@ -14698,5 +14706,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

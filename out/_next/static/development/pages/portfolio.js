@@ -92,7 +92,7 @@ var portfolio = function portfolio() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fportfolio&absolutePagePath=%2FUsers%2Fjoaoinez%2FDocuments%2FProjects%2FConstroiWood%2Fpages%2Fportfolio.js ***!
   \**********************************************************************************************************************************************************/
@@ -115,5 +115,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=portfolio.js.map

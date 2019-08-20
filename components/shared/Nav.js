@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { Hammer } from "styled-icons/fa-solid/Hammer";
-import { Row, Col, H } from "../ui";
+import { PrimitiveDot } from "styled-icons/octicons/PrimitiveDot";
+import { Row, Col, H, P } from "../ui";
 
 const Navbar = styled.header`
   position: fixed;
@@ -14,7 +15,6 @@ const Navbar = styled.header`
 
 const Container = styled(Row)`
   background-color: ${({ theme }) => theme.white};
-  padding: 0 20px;
 `;
 
 const HammerIcon = styled(Hammer)`
@@ -50,10 +50,32 @@ const LogoLink = styled.a`
   }
 `;
 
+const DotIcon = styled(PrimitiveDot)`
+  width: 5px;
+  margin: 0 20px;
+`;
+
+const NavS = styled.nav`
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    ${P} {
+      transition: all 0.15s ease-in-out;
+    }
+
+    &:hover ${P} {
+      color: ${({ theme }) => theme.blue};
+    }
+  }
+`;
+
 const Nav = () => (
   <Navbar>
     <Container>
-      <Col flex>
+      <Col flex padding="0 0 0 20px">
         <Link href="/">
           <LogoLink>
             <Logo>
@@ -64,6 +86,21 @@ const Nav = () => (
             </H>
           </LogoLink>
         </Link>
+      </Col>
+      <Col sm={0} padding="0 20px 0 0">
+        <NavS>
+          <Link href="/">
+            <a>
+              <P>Home</P>
+            </a>
+          </Link>
+          <DotIcon />
+          <Link href="/portfolio">
+            <a>
+              <P>Portfolio</P>
+            </a>
+          </Link>
+        </NavS>
       </Col>
     </Container>
   </Navbar>
