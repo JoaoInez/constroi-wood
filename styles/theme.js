@@ -5,8 +5,8 @@ const queries = {
 };
 
 const theme = {
-  blue: "#1A535C",
-  darkBlue: "#1b1e27",
+  blue: "#247BA0",
+  darkBlue: "#1B1E27",
   green: "#4ECDC4",
   yellow: "#FFE66D",
   red: "#FF6B6B",
@@ -14,6 +14,7 @@ const theme = {
   black: "#000",
   darkGrey: "#454545",
   lightGrey: "#F7FFF7",
+  lightShadow: "#F0F1F2",
   media: queries
 };
 

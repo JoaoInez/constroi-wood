@@ -1,7 +1,6 @@
 import React from "react";
+import Portfolio from "../components/pages/portfolio";
 
-const portfolio = () => {
-  return <div>It works!</div>;
-};
+const portfolio = () => <Portfolio />;
 
 export default portfolio;

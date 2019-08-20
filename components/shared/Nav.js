@@ -8,7 +8,7 @@ const Navbar = styled.header`
   position: fixed;
   width: 100%;
   top: 0;
-  box-shadow: 0 2px 8px #f0f1f2;
+  box-shadow: 0 2px 8px ${({ theme }) => theme.lightShadow};
   z-index: 1;
 `;
 
@@ -19,11 +19,11 @@ const Container = styled(Row)`
 
 const HammerIcon = styled(Hammer)`
   width: 20px;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.blue};
 `;
 
 const Logo = styled.div`
-  background-color: ${({ theme }) => theme.black};
+  border: 2.5px solid ${({ theme }) => theme.blue};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,21 +31,29 @@ const Logo = styled.div`
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  transition: all 0.15s ease-in-out;
 `;
 
 const LogoLink = styled.a`
   display: flex;
   align-items: center;
+  cursor: pointer;
 
-  ${Logo}, ${H} {
-    cursor: pointer;
+  &:hover {
+    ${Logo} {
+      background-color: ${({ theme }) => theme.blue};
+    }
+
+    ${HammerIcon} {
+      color: ${({ theme }) => theme.white};
+    }
   }
 `;
 
 const Nav = () => (
   <Navbar>
     <Container>
-      <Col>
+      <Col flex>
         <Link href="/">
           <LogoLink>
             <Logo>

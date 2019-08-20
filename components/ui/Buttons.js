@@ -29,8 +29,7 @@ const Button = styled.button`
   &:hover {
     color: ${({ theme, outline, color, bgColor }) =>
       !outline ? theme[bgColor] : theme[color]};
-    background-color: ${({ theme, outline, color }) =>
-      !outline ? theme[color] : "transparent"};
+    background-color: transparent;
     box-shadow: ${({ theme, outline, color }) =>
       !outline ? "none" : `0 0 3px 2px ${theme[color]}`};
   }

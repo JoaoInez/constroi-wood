@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const H = styled.h1`
   color: ${({ theme, color = "black" }) => theme[color]};
-  font-weight: 400;
+  font-weight: ${({ bold = false }) => (bold ? "bold" : "400")};
   font-size: ${({ h = 1 }) =>
     h === 4
       ? "1.2rem"

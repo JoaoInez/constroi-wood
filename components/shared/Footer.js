@@ -8,6 +8,7 @@ const SFooter = styled.footer`
   background-color: ${({ theme }) => theme.darkBlue};
   color: ${({ theme }) => theme.white};
   padding: 10px 20px;
+  box-shadow: 0px -1px 4px ${({ theme }) => theme.darkGrey};
 `;
 
 const Content = styled.div`
