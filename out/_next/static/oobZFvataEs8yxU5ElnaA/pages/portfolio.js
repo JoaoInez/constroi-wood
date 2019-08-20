@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{AGzW:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/portfolio",function(){var n=e("eAkX");return{page:n.default||n}}])},eAkX:function(n,t,e){"use strict";e.r(t);var o=e("q1tI"),u=e.n(o);t.default=function(){return u.a.createElement("div",null,"It works!")}}},[["AGzW",1,0]]]);
