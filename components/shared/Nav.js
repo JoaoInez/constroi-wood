@@ -1,8 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import { Hammer } from "styled-icons/fa-solid/Hammer";
-import { Row, Col } from "../components/Grid";
-import { H } from "../components/Typography";
+import { Row, Col, H } from "../ui";
 
 const Navbar = styled.header`
   position: fixed;
@@ -33,16 +33,29 @@ const Logo = styled.div`
   margin-right: 10px;
 `;
 
+const LogoLink = styled.a`
+  display: flex;
+  align-items: center;
+
+  ${Logo}, ${H} {
+    cursor: pointer;
+  }
+`;
+
 const Nav = () => (
   <Navbar>
     <Container>
-      <Col flex align="center">
-        <Logo>
-          <HammerIcon />
-        </Logo>
-        <H color="black" h={3}>
-          ConstroiWood
-        </H>
+      <Col>
+        <Link href="/">
+          <LogoLink>
+            <Logo>
+              <HammerIcon />
+            </Logo>
+            <H color="black" h={3}>
+              ConstroiWood
+            </H>
+          </LogoLink>
+        </Link>
       </Col>
     </Container>
   </Navbar>

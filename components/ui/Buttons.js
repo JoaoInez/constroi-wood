@@ -27,8 +27,12 @@ const Button = styled.button`
   transition: all 0.15s ease-in-out;
 
   &:hover {
-    /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
-    box-shadow: 0 0 3px 2px ${({ theme, color }) => theme[color]};
+    color: ${({ theme, outline, color, bgColor }) =>
+      !outline ? theme[bgColor] : theme[color]};
+    background-color: ${({ theme, outline, color }) =>
+      !outline ? theme[color] : "transparent"};
+    box-shadow: ${({ theme, outline, color }) =>
+      !outline ? "none" : `0 0 3px 2px ${theme[color]}`};
   }
 `;
 

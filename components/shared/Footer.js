@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { At } from "styled-icons/boxicons-regular/At";
 import { Phone } from "styled-icons/boxicons-regular/Phone";
-import { P } from "./Typography";
+import { P } from "../ui";
 
 const SFooter = styled.footer`
   background-color: ${({ theme }) => theme.darkBlue};
