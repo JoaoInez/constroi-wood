@@ -53,6 +53,11 @@ const ArrowDownIcon = styled(LongArrowAltDown)``;
 const ContactButton = styled(Button)`
   overflow: hidden;
   position: relative;
+  transition: box-shadow 0.1s ease-in-out;
+
+  &:active {
+    box-shadow: 0 0 6px 3px ${({ theme }) => theme.blue};
+  }
 
   ${P} {
     text-shadow: none;
@@ -133,6 +138,11 @@ const ContactButton = styled(Button)`
 const PortfolioButton = styled(Button)`
   overflow: hidden;
   position: relative;
+  transition: box-shadow 0.1s ease-in-out;
+
+  &:active {
+    box-shadow: 0 0 6px 3px ${({ theme }) => theme.blue};
+  }
 
   ${P} {
     animation-name: ${({ state }) =>
@@ -164,7 +174,6 @@ const PortfolioButton = styled(Button)`
     @keyframes text_blur {
       from {
         transform: translateX(-10px);
-        color: ${({ theme, bgColor }) => theme[bgColor]};
       }
 
       to {
@@ -178,7 +187,7 @@ const PortfolioButton = styled(Button)`
     position: absolute;
     height: 40px;
     top: 10px;
-    right: calc(50% - 10px);
+    right: 20px;
     animation-name: ${({ state }) =>
       state === "hover"
         ? "arrow_hover"
@@ -192,7 +201,7 @@ const PortfolioButton = styled(Button)`
 
     @keyframes arrow_hover {
       from {
-        right: calc(50% - 10px);
+        right: 20px;
         opacity: 0;
       }
 
@@ -209,7 +218,7 @@ const PortfolioButton = styled(Button)`
       }
 
       to {
-        right: calc(50% - 10px);
+        right: 20px;
         opacity: 0;
       }
     }
@@ -313,12 +322,12 @@ const Homepage = () => {
         <H>Projectos</H>
         <Divider width="33%" margin="0 0 30px 0" />
         <WideCard
-          image={portfolio.carpentry[0].image}
+          image={portfolio.carpentry[0].images[0]}
           title={portfolio.carpentry[0].title}
           description={portfolio.carpentry[0].description}
         />
         <WideCard
-          image={portfolio.carpentry[1].image}
+          image={portfolio.carpentry[1].images[0]}
           title={portfolio.carpentry[1].title}
           description={portfolio.carpentry[1].description}
         />

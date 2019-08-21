@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { withRouter } from "next/router";
 import styled from "styled-components";
 import { Hammer } from "styled-icons/fa-solid/Hammer";
 import { PrimitiveDot } from "styled-icons/octicons/PrimitiveDot";
@@ -60,22 +61,24 @@ const NavS = styled.nav`
   height: 100%;
   justify-content: flex-end;
   align-items: center;
+`;
 
-  a {
-    ${P} {
-      transition: all 0.15s ease-in-out;
-    }
+const A = styled.a`
+  ${P} {
+    transition: all 0.15s ease-in-out;
+    color: ${({ theme, path, link }) =>
+      path === link ? theme.blue : theme.darkGrey};
+  }
 
-    &:hover ${P} {
-      color: ${({ theme }) => theme.blue};
-    }
+  &:hover ${P} {
+    color: ${({ theme }) => theme.blue};
   }
 `;
 
-const Nav = () => (
+const Nav = ({ router: { pathname } }) => (
   <Navbar>
     <Container>
-      <Col flex padding="0 0 0 20px">
+      <Col flex padding="0 0 0 40px">
         <Link href="/">
           <LogoLink>
             <Logo>
@@ -87,18 +90,18 @@ const Nav = () => (
           </LogoLink>
         </Link>
       </Col>
-      <Col sm={0} padding="0 20px 0 0">
+      <Col sm={0} padding="0 40px 0 0">
         <NavS>
           <Link href="/">
-            <a>
+            <A path={pathname} link="/">
               <P>Home</P>
-            </a>
+            </A>
           </Link>
           <DotIcon />
           <Link href="/portfolio">
-            <a>
+            <A path={pathname} link="/portfolio">
               <P>Portfolio</P>
-            </a>
+            </A>
           </Link>
         </NavS>
       </Col>
@@ -106,4 +109,4 @@ const Nav = () => (
   </Navbar>
 );
 
-export default Nav;
+export default withRouter(Nav);

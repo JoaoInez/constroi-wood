@@ -256,41 +256,17 @@ function Meta() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "description",
-    content: "Website de ConstroiWood, empresa de carpintaria, pintura de remodela\xE7\xF5es",
+    name: "viewport",
+    content: "initial-scale=1.0, width=device-width",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "keywords",
-    content: "carpintaria, pintura, remodela\xE7\xF5es, constroiwood, woodconstroi",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "author",
-    content: "John Doe",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "viewport",
-    content: "initial-scale=1.0, width=device-width",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 12
     },
     __self: this
   }, "ConstroiWood"));
@@ -358,12 +334,15 @@ var Logo = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withCon
 var LogoLink = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a.withConfig({
   displayName: "Nav__LogoLink",
   componentId: "sc-1w6a0ie-4"
-})(["display:flex;align-items:center;cursor:pointer;&:hover{", "{background-color:", ";}", "{color:", ";}}"], Logo, function (_ref5) {
+})(["display:flex;align-items:center;cursor:pointer;&:hover{", "{background-color:", ";}", "{color:", ";}}&:active{", "{box-shadow:0 0 6px 3px ", ";}}"], Logo, function (_ref5) {
   var theme = _ref5.theme;
   return theme.blue;
 }, HammerIcon, function (_ref6) {
   var theme = _ref6.theme;
   return theme.white;
+}, Logo, function (_ref7) {
+  var theme = _ref7.theme;
+  return theme.blue;
 });
 var DotIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(styled_icons_octicons_PrimitiveDot__WEBPACK_IMPORTED_MODULE_5__["PrimitiveDot"]).withConfig({
   displayName: "Nav__DotIcon",
@@ -376,28 +355,31 @@ var NavS = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].nav.withCon
 var A = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a.withConfig({
   displayName: "Nav__A",
   componentId: "sc-1w6a0ie-7"
-})(["", "{transition:all 0.15s ease-in-out;color:", ";}&:hover ", "{color:", ";}"], _ui__WEBPACK_IMPORTED_MODULE_6__["P"], function (_ref7) {
-  var theme = _ref7.theme,
-      path = _ref7.path,
-      link = _ref7.link;
+})(["", "{transition:all 0.15s ease-in-out;color:", ";}&:hover ", "{color:", ";}&:active ", "{color:", ";}"], _ui__WEBPACK_IMPORTED_MODULE_6__["P"], function (_ref8) {
+  var theme = _ref8.theme,
+      path = _ref8.path,
+      link = _ref8.link;
   return path === link ? theme.blue : theme.darkGrey;
-}, _ui__WEBPACK_IMPORTED_MODULE_6__["P"], function (_ref8) {
-  var theme = _ref8.theme;
+}, _ui__WEBPACK_IMPORTED_MODULE_6__["P"], function (_ref9) {
+  var theme = _ref9.theme;
   return theme.blue;
+}, _ui__WEBPACK_IMPORTED_MODULE_6__["P"], function (_ref10) {
+  var theme = _ref10.theme;
+  return theme.darkBlue;
 });
 
-var Nav = function Nav(_ref9) {
-  var pathname = _ref9.router.pathname;
+var Nav = function Nav(_ref11) {
+  var pathname = _ref11.router.pathname;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Navbar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_6__["Col"], {
@@ -405,32 +387,32 @@ var Nav = function Nav(_ref9) {
     padding: "0 0 0 40px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 91
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 92
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoLink, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 94
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HammerIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 95
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_6__["H"], {
@@ -438,7 +420,7 @@ var Nav = function Nav(_ref9) {
     h: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 97
     },
     __self: this
   }, "ConstroiWood")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_6__["Col"], {
@@ -446,20 +428,20 @@ var Nav = function Nav(_ref9) {
     padding: "0 40px 0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 103
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavS, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 104
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 105
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -467,26 +449,26 @@ var Nav = function Nav(_ref9) {
     link: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 106
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_6__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 107
     },
     __self: this
   }, "Home"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DotIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 110
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/portfolio",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 111
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(A, {
@@ -494,13 +476,13 @@ var Nav = function Nav(_ref9) {
     link: "/portfolio",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 112
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_6__["P"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 113
     },
     __self: this
   }, "Portfolio")))))));
