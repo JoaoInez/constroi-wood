@@ -227,45 +227,47 @@ var ArrowDownIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["defau
 var ContactButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(_ui__WEBPACK_IMPORTED_MODULE_10__["Button"]).withConfig({
   displayName: "index__ContactButton",
   componentId: "hpb436-6"
-})(["overflow:hidden;position:relative;", "{text-shadow:none;animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;pointer-events:none;animation-delay:", ";&:hover{animation-name:hover;}@keyframes text_hover_v{from{transform:translateY(0);}to{transform:translateY(40px);}}@keyframes text_blur_v{from{transform:translateY(40px);}to{transform:translateY(0);}}}", "{position:absolute;height:40px;top:10px;transform:translateY(-50px);right:calc(50% - 10px);animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;animation-delay:", ";@keyframes arrow_hover_h{from{transform:translateY(-50px);}to{transform:translateY(0);}}@keyframes arrow_blur_h{from{transform:translateY(0);}to{transform:translateY(-50px);}}}"], _ui__WEBPACK_IMPORTED_MODULE_10__["P"], function (_ref2) {
-  var state = _ref2.state;
-  return state === "hover" ? "text_hover_v" : state === "blur" ? "text_blur_v" : "none";
-}, function (_ref3) {
+})(["overflow:hidden;position:relative;transition:box-shadow 0.1s ease-in-out;&:active{box-shadow:0 0 6px 3px ", ";}", "{text-shadow:none;animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;pointer-events:none;animation-delay:", ";&:hover{animation-name:hover;}@keyframes text_hover_v{from{transform:translateY(0);}to{transform:translateY(40px);}}@keyframes text_blur_v{from{transform:translateY(40px);}to{transform:translateY(0);}}}", "{position:absolute;height:40px;top:10px;transform:translateY(-50px);right:calc(50% - 10px);animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;animation-delay:", ";@keyframes arrow_hover_h{from{transform:translateY(-50px);}to{transform:translateY(0);}}@keyframes arrow_blur_h{from{transform:translateY(0);}to{transform:translateY(-50px);}}}"], function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.blue;
+}, _ui__WEBPACK_IMPORTED_MODULE_10__["P"], function (_ref3) {
   var state = _ref3.state;
-  return state === "blur" ? "0.15s" : 0;
-}, ArrowDownIcon, function (_ref4) {
+  return state === "hover" ? "text_hover_v" : state === "blur" ? "text_blur_v" : "none";
+}, function (_ref4) {
   var state = _ref4.state;
-  return state === "hover" ? "arrow_hover_h" : state === "blur" ? "arrow_blur_h" : "none";
-}, function (_ref5) {
+  return state === "blur" ? "0.15s" : 0;
+}, ArrowDownIcon, function (_ref5) {
   var state = _ref5.state;
+  return state === "hover" ? "arrow_hover_h" : state === "blur" ? "arrow_blur_h" : "none";
+}, function (_ref6) {
+  var state = _ref6.state;
   return state === "blur" ? 0 : "0.15s";
 });
 var PortfolioButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(_ui__WEBPACK_IMPORTED_MODULE_10__["Button"]).withConfig({
   displayName: "index__PortfolioButton",
   componentId: "hpb436-7"
-})(["overflow:hidden;position:relative;", "{animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;pointer-events:none;animation-delay:", ";&:hover{animation-name:hover;}@keyframes text_hover{from{transform:translateX(0);}to{transform:translateX(-10px);color:", ";}}@keyframes text_blur{from{transform:translateX(-10px);color:", ";}to{transform:translateX(0);color:", ";}}}", "{position:absolute;height:40px;top:10px;right:calc(50% - 10px);animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;animation-delay:", ";opacity:0;@keyframes arrow_hover{from{right:calc(50% - 10px);opacity:0;}to{right:10px;opacity:1;}}@keyframes arrow_blur{from{right:10px;opacity:1;}to{right:calc(50% - 10px);opacity:0;}}}"], _ui__WEBPACK_IMPORTED_MODULE_10__["P"], function (_ref6) {
-  var state = _ref6.state;
+})(["overflow:hidden;position:relative;transition:box-shadow 0.1s ease-in-out;&:active{box-shadow:0 0 6px 3px ", ";}", "{animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;pointer-events:none;animation-delay:", ";&:hover{animation-name:hover;}@keyframes text_hover{from{transform:translateX(0);}to{transform:translateX(-10px);color:", ";}}@keyframes text_blur{from{transform:translateX(-10px);}to{transform:translateX(0);color:", ";}}}", "{position:absolute;height:40px;top:10px;right:20px;animation-name:", ";animation-duration:0.2s;animation-fill-mode:both;animation-delay:", ";opacity:0;@keyframes arrow_hover{from{right:20px;opacity:0;}to{right:10px;opacity:1;}}@keyframes arrow_blur{from{right:10px;opacity:1;}to{right:20px;opacity:0;}}}"], function (_ref7) {
+  var theme = _ref7.theme;
+  return theme.blue;
+}, _ui__WEBPACK_IMPORTED_MODULE_10__["P"], function (_ref8) {
+  var state = _ref8.state;
   return state === "hover" ? "text_hover" : state === "blur" ? "text_blur" : "none";
-}, function (_ref7) {
-  var state = _ref7.state;
-  return state === "blur" ? "0.15s" : 0;
-}, function (_ref8) {
-  var theme = _ref8.theme,
-      bgColor = _ref8.bgColor;
-  return theme[bgColor];
 }, function (_ref9) {
-  var theme = _ref9.theme,
-      bgColor = _ref9.bgColor;
-  return theme[bgColor];
+  var state = _ref9.state;
+  return state === "blur" ? "0.15s" : 0;
 }, function (_ref10) {
   var theme = _ref10.theme,
-      color = _ref10.color;
+      bgColor = _ref10.bgColor;
+  return theme[bgColor];
+}, function (_ref11) {
+  var theme = _ref11.theme,
+      color = _ref11.color;
   return theme[color];
-}, ArrowRightIcon, function (_ref11) {
-  var state = _ref11.state;
-  return state === "hover" ? "arrow_hover" : state === "blur" ? "arrow_blur" : "none";
-}, function (_ref12) {
+}, ArrowRightIcon, function (_ref12) {
   var state = _ref12.state;
+  return state === "hover" ? "arrow_hover" : state === "blur" ? "arrow_blur" : "none";
+}, function (_ref13) {
+  var state = _ref13.state;
   return state === "blur" ? 0 : "0.15s";
 });
 var BottomAnchor = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
@@ -299,28 +301,28 @@ var Homepage = function Homepage() {
     relative: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 242
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["SectionImage"], {
     url: "/static/stock-const-1.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 243
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["SectionContent"], {
     margin: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 244
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Title, {
     color: "white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236
+      lineNumber: 245
     },
     __self: this
   }, "Sample title"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Divider"], {
@@ -329,7 +331,7 @@ var Homepage = function Homepage() {
     margin: "0 0 30px 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 246
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["P"], {
@@ -338,7 +340,7 @@ var Homepage = function Homepage() {
     width: "600px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 247
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ContactButton, {
@@ -356,33 +358,33 @@ var Homepage = function Homepage() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 253
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["P"], {
     color: "white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 263
     },
     __self: this
   }, "Contactos"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ArrowDownIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255
+      lineNumber: 264
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Section"], {
     padding: "20px 0 50px 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 268
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["H"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 269
     },
     __self: this
   }, "Servi\xE7os"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Divider"], {
@@ -390,14 +392,14 @@ var Homepage = function Homepage() {
     margin: "0 0 30px 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261
+      lineNumber: 270
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Row"], {
     maxWidth: "1000px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 271
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Col"], {
@@ -405,19 +407,19 @@ var Homepage = function Homepage() {
     justify: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263
+      lineNumber: 272
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ServiceCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 273
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HammerIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265
+      lineNumber: 274
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["H"], {
@@ -425,14 +427,14 @@ var Homepage = function Homepage() {
     align: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 275
     },
     __self: this
   }, "Carpintaria"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["P"], {
     align: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 278
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Col"], {
@@ -440,19 +442,19 @@ var Homepage = function Homepage() {
     justify: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 284
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ServiceCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
+      lineNumber: 285
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PaintRollerIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 286
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["H"], {
@@ -460,14 +462,14 @@ var Homepage = function Homepage() {
     align: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278
+      lineNumber: 287
     },
     __self: this
   }, "Pinturas"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["P"], {
     align: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 281
+      lineNumber: 290
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Col"], {
@@ -475,19 +477,19 @@ var Homepage = function Homepage() {
     justify: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 296
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ServiceCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
+      lineNumber: 297
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BathIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289
+      lineNumber: 298
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["H"], {
@@ -495,14 +497,14 @@ var Homepage = function Homepage() {
     align: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 299
     },
     __self: this
   }, "Remodela\xE7\xF5es"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["P"], {
     align: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 293
+      lineNumber: 302
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Section"], {
@@ -512,21 +514,21 @@ var Homepage = function Homepage() {
     relative: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 310
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["SectionImage"], {
     url: "/static/stock-carp-1.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 311
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["SectionContent"], {
     margin: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 312
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["P"], {
@@ -534,26 +536,26 @@ var Homepage = function Homepage() {
     width: "500px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 313
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 314
     },
     __self: this
   }, "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\"")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Section"], {
     padding: "20px 0 50px 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 312
+      lineNumber: 321
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["H"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 322
     },
     __self: this
   }, "Projectos"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["Divider"], {
@@ -561,38 +563,38 @@ var Homepage = function Homepage() {
     margin: "0 0 30px 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 323
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    image: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[0].image,
+    image: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[0].images[0],
     title: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[0].title,
     description: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[0].description,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
+      lineNumber: 324
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ProjectCard__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    image: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[1].image,
+    image: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[1].images[0],
     title: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[1].title,
     description: _data_portfolio_json__WEBPACK_IMPORTED_MODULE_9__.carpentry[1].description,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 329
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/portfolio",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325
+      lineNumber: 334
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 326
+      lineNumber: 335
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PortfolioButton, {
@@ -609,27 +611,27 @@ var Homepage = function Homepage() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 327
+      lineNumber: 336
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ui__WEBPACK_IMPORTED_MODULE_10__["P"], {
     color: "white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 336
+      lineNumber: 345
     },
     __self: this
   }, "Portfolio"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ArrowRightIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 337
+      lineNumber: 346
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BottomAnchor, {
     ref: bottomRef,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342
+      lineNumber: 351
     },
     __self: this
   }));
@@ -654,7 +656,7 @@ __webpack_require__.r(__webpack_exports__);
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
   displayName: "Buttons__Button",
   componentId: "sc-167292g-0"
-})(["font-size:", ";margin:", ";padding:", ";background-color:", ";color:", ";border:2px solid ", ";border-radius:3px;cursor:pointer;transition:all 0.15s ease-in-out;&:hover{color:", ";background-color:transparent;box-shadow:", ";}"], function (_ref) {
+})(["font-size:", ";margin:", ";padding:", ";background-color:", ";color:", ";border:2px solid ", ";border-radius:3px;cursor:pointer;transition:all 0.15s ease-in-out;&:hover{color:", ";background-color:transparent;box-shadow:", ";}&:focus{outline:none;}"], function (_ref) {
   var _ref$size = _ref.size,
       size = _ref$size === void 0 ? "md" : _ref$size;
   return size === "sm" ? "0.8rem" : size === "md" ? "1rem" : size === "lg" ? "1.5rem" : "1rem";
@@ -676,7 +678,7 @@ var Button = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.wi
 }, function (_ref5) {
   var theme = _ref5.theme,
       _ref5$color = _ref5.color,
-      color = _ref5$color === void 0 ? "blue" : _ref5$color;
+      color = _ref5$color === void 0 ? "white" : _ref5$color;
   return theme[color];
 }, function (_ref6) {
   var theme = _ref6.theme,
@@ -748,7 +750,7 @@ __webpack_require__.r(__webpack_exports__);
 var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "Grid__Row",
   componentId: "cyd3bg-0"
-})(["display:flex;flex-wrap:wrap;flex-direction:", ";width:", ";max-width:", ";"], function (_ref) {
+})(["display:flex;flex-wrap:wrap;flex-direction:", ";width:", ";max-width:", ";margin:", ";"], function (_ref) {
   var _ref$column = _ref.column,
       column = _ref$column === void 0 ? false : _ref$column;
   return column ? "column" : "row";
@@ -760,64 +762,72 @@ var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConf
   var _ref3$maxWidth = _ref3.maxWidth,
       maxWidth = _ref3$maxWidth === void 0 ? "initial" : _ref3$maxWidth;
   return maxWidth;
+}, function (_ref4) {
+  var _ref4$margin = _ref4.margin,
+      margin = _ref4$margin === void 0 ? 0 : _ref4$margin;
+  return margin;
 });
 var Col = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "Grid__Col",
   componentId: "cyd3bg-1"
-})(["align-items:", ";justify-content:", ";flex-direction:", ";padding:", ";@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}"], function (_ref4) {
-  var _ref4$align = _ref4.align,
-      align = _ref4$align === void 0 ? "initial" : _ref4$align;
+})(["align-items:", ";justify-content:", ";flex-direction:", ";padding:", ";min-width:", ";@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}@media ", "{flex:", ";display:", ";}"], function (_ref5) {
+  var _ref5$align = _ref5.align,
+      align = _ref5$align === void 0 ? "initial" : _ref5$align;
   return align;
-}, function (_ref5) {
-  var _ref5$justify = _ref5.justify,
-      justify = _ref5$justify === void 0 ? "initial" : _ref5$justify;
-  return justify;
 }, function (_ref6) {
-  var _ref6$column = _ref6.column,
-      column = _ref6$column === void 0 ? false : _ref6$column;
-  return column ? "column" : "initial";
+  var _ref6$justify = _ref6.justify,
+      justify = _ref6$justify === void 0 ? "initial" : _ref6$justify;
+  return justify;
 }, function (_ref7) {
-  var _ref7$padding = _ref7.padding,
-      padding = _ref7$padding === void 0 ? 0 : _ref7$padding;
-  return padding;
+  var _ref7$column = _ref7.column,
+      column = _ref7$column === void 0 ? false : _ref7$column;
+  return column ? "column" : "initial";
 }, function (_ref8) {
-  var media = _ref8.theme.media;
-  return media.mobile;
+  var _ref8$padding = _ref8.padding,
+      padding = _ref8$padding === void 0 ? 0 : _ref8$padding;
+  return padding;
 }, function (_ref9) {
-  var _ref9$sm = _ref9.sm,
-      sm = _ref9$sm === void 0 ? 1 : _ref9$sm;
-  return sm;
+  var _ref9$minWidth = _ref9.minWidth,
+      minWidth = _ref9$minWidth === void 0 ? "initial" : _ref9$minWidth;
+  return minWidth;
 }, function (_ref10) {
-  var _ref10$sm = _ref10.sm,
-      sm = _ref10$sm === void 0 ? 1 : _ref10$sm,
-      _ref10$flex = _ref10.flex,
-      flex = _ref10$flex === void 0 ? false : _ref10$flex;
-  return sm === 0 ? "none" : flex ? "flex" : "initial";
+  var media = _ref10.theme.media;
+  return media.mobile;
 }, function (_ref11) {
-  var media = _ref11.theme.media;
-  return media.laptop;
+  var _ref11$sm = _ref11.sm,
+      sm = _ref11$sm === void 0 ? 1 : _ref11$sm;
+  return sm;
 }, function (_ref12) {
-  var _ref12$md = _ref12.md,
-      md = _ref12$md === void 0 ? 1 : _ref12$md;
-  return md;
+  var _ref12$sm = _ref12.sm,
+      sm = _ref12$sm === void 0 ? 1 : _ref12$sm,
+      _ref12$flex = _ref12.flex,
+      flex = _ref12$flex === void 0 ? false : _ref12$flex;
+  return sm === 0 ? "none" : flex ? "flex" : "initial";
 }, function (_ref13) {
-  var _ref13$md = _ref13.md,
-      md = _ref13$md === void 0 ? 1 : _ref13$md,
-      _ref13$flex = _ref13.flex,
-      flex = _ref13$flex === void 0 ? false : _ref13$flex;
-  return md === 0 ? "none" : flex ? "flex" : "initial";
+  var media = _ref13.theme.media;
+  return media.laptop;
 }, function (_ref14) {
-  var media = _ref14.theme.media;
-  return media.desktop;
+  var _ref14$md = _ref14.md,
+      md = _ref14$md === void 0 ? 1 : _ref14$md;
+  return md;
 }, function (_ref15) {
-  var _ref15$lg = _ref15.lg,
-      lg = _ref15$lg === void 0 ? 1 : _ref15$lg;
-  return lg;
+  var _ref15$md = _ref15.md,
+      md = _ref15$md === void 0 ? 1 : _ref15$md,
+      _ref15$flex = _ref15.flex,
+      flex = _ref15$flex === void 0 ? false : _ref15$flex;
+  return md === 0 ? "none" : flex ? "flex" : "initial";
 }, function (_ref16) {
-  var _ref16$lg = _ref16.lg,
-      lg = _ref16$lg === void 0 ? 1 : _ref16$lg,
-      _ref16$flex = _ref16.flex,
-      flex = _ref16$flex === void 0 ? false : _ref16$flex;
+  var media = _ref16.theme.media;
+  return media.desktop;
+}, function (_ref17) {
+  var _ref17$lg = _ref17.lg,
+      lg = _ref17$lg === void 0 ? 1 : _ref17$lg;
+  return lg;
+}, function (_ref18) {
+  var _ref18$lg = _ref18.lg,
+      lg = _ref18$lg === void 0 ? 1 : _ref18$lg,
+      _ref18$flex = _ref18.flex,
+      flex = _ref18$flex === void 0 ? false : _ref18$flex;
   return lg === 0 ? "none" : flex ? "flex" : "initial";
 });
 
@@ -845,7 +855,7 @@ __webpack_require__.r(__webpack_exports__);
 var Section = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "Section",
   componentId: "sc-1sqm0ty-0"
-})(["position:", ";display:", ";flex-direction:column;align-items:center;justify-content:", ";padding:", ";height:", ";background-color:", ";"], function (_ref) {
+})(["position:", ";display:", ";flex-direction:", ";align-items:", ";justify-content:", ";padding:", ";height:", ";background-color:", ";"], function (_ref) {
   var _ref$relative = _ref.relative,
       relative = _ref$relative === void 0 ? false : _ref$relative;
   return relative ? "relative" : "initial";
@@ -854,42 +864,50 @@ var Section = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.
       noFlex = _ref2$noFlex === void 0 ? false : _ref2$noFlex;
   return noFlex ? "initial" : "flex";
 }, function (_ref3) {
-  var _ref3$justify = _ref3.justify,
-      justify = _ref3$justify === void 0 ? "initial" : _ref3$justify;
-  return justify;
+  var _ref3$row = _ref3.row,
+      row = _ref3$row === void 0 ? false : _ref3$row;
+  return row ? "row" : "column";
 }, function (_ref4) {
-  var _ref4$padding = _ref4.padding,
-      padding = _ref4$padding === void 0 ? "50px 20px" : _ref4$padding;
-  return padding;
+  var _ref4$align = _ref4.align,
+      align = _ref4$align === void 0 ? "center" : _ref4$align;
+  return align;
 }, function (_ref5) {
-  var _ref5$height = _ref5.height,
-      height = _ref5$height === void 0 ? "initial" : _ref5$height;
-  return height;
+  var _ref5$justify = _ref5.justify,
+      justify = _ref5$justify === void 0 ? "initial" : _ref5$justify;
+  return justify;
 }, function (_ref6) {
-  var theme = _ref6.theme,
-      _ref6$bgColor = _ref6.bgColor,
-      bgColor = _ref6$bgColor === void 0 ? "white" : _ref6$bgColor;
+  var _ref6$padding = _ref6.padding,
+      padding = _ref6$padding === void 0 ? "50px 20px" : _ref6$padding;
+  return padding;
+}, function (_ref7) {
+  var _ref7$height = _ref7.height,
+      height = _ref7$height === void 0 ? "initial" : _ref7$height;
+  return height;
+}, function (_ref8) {
+  var theme = _ref8.theme,
+      _ref8$bgColor = _ref8.bgColor,
+      bgColor = _ref8$bgColor === void 0 ? "white" : _ref8$bgColor;
   return theme[bgColor];
 });
 var SectionImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "Section__SectionImage",
   componentId: "sc-1sqm0ty-1"
-})(["background-image:url(", ");background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center;position:absolute;width:100%;height:100%;opacity:0.8;"], function (_ref7) {
-  var url = _ref7.url;
+})(["background-image:url(", ");background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center;position:absolute;width:100%;height:100%;opacity:0.8;"], function (_ref9) {
+  var url = _ref9.url;
   return url;
 });
 var SectionContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "Section__SectionContent",
   componentId: "sc-1sqm0ty-2"
-})(["position:absolute;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;", ",", "{text-shadow:0 1px 2px ", ";}", "{box-shadow:0 1px 2px ", ";}", "{margin:", ";}"], _Typography__WEBPACK_IMPORTED_MODULE_1__["P"], _Typography__WEBPACK_IMPORTED_MODULE_1__["H"], function (_ref8) {
-  var theme = _ref8.theme;
+})(["position:absolute;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;", ",", "{text-shadow:0 1px 2px ", ";}", "{box-shadow:0 1px 2px ", ";}", "{margin:", ";}"], _Typography__WEBPACK_IMPORTED_MODULE_1__["P"], _Typography__WEBPACK_IMPORTED_MODULE_1__["H"], function (_ref10) {
+  var theme = _ref10.theme;
   return theme.black;
-}, _Divider__WEBPACK_IMPORTED_MODULE_2__["Divider"], function (_ref9) {
-  var theme = _ref9.theme;
+}, _Divider__WEBPACK_IMPORTED_MODULE_2__["Divider"], function (_ref11) {
+  var theme = _ref11.theme;
   return theme.black;
-}, _Typography__WEBPACK_IMPORTED_MODULE_1__["P"], function (_ref10) {
-  var _ref10$margin = _ref10.margin,
-      margin = _ref10$margin === void 0 ? false : _ref10$margin;
+}, _Typography__WEBPACK_IMPORTED_MODULE_1__["P"], function (_ref12) {
+  var _ref12$margin = _ref12.margin,
+      margin = _ref12$margin === void 0 ? false : _ref12$margin;
   return margin ? "0 20px" : 0;
 });
 
@@ -998,7 +1016,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: carpentry, painting, remodeling, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"carpentry\":[{\"title\":\"Hotel Eva\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"image\":\"/static/eva-faro.jpeg\"},{\"title\":\"Hotel Tivoli\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"image\":\"/static/hotel-tivoli.jpg\"}],\"painting\":[{\"title\":\"Hotel Eva\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"image\":\"/static/eva-faro.jpeg\"}],\"remodeling\":[{\"title\":\"Hotel Eva\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"image\":\"/static/eva-faro.jpeg\"}]}");
+module.exports = JSON.parse("{\"carpentry\":[{\"title\":\"Hotel Eva\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"images\":[\"/static/eva-faro.jpeg\",\"/static/hotel-tivoli.jpg\"]},{\"title\":\"Hotel Tivoli\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"images\":[\"/static/hotel-tivoli.jpg\"]}],\"painting\":[{\"title\":\"Hotel Eva\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"images\":[\"/static/eva-faro.jpeg\"]}],\"remodeling\":[{\"title\":\"Hotel Eva\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\"images\":[\"/static/eva-faro.jpeg\"]}]}");
 
 /***/ }),
 
@@ -14675,7 +14693,7 @@ var index = function index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjoaoinez%2FDocuments%2FProjects%2FConstroiWood%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************/
@@ -14698,5 +14716,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -6,6 +6,7 @@ const Row = styled.div`
   flex-direction: ${({ column = false }) => (column ? "column" : "row")};
   width: ${({ width = "100%" }) => width};
   max-width: ${({ maxWidth = "initial" }) => maxWidth};
+  margin: ${({ margin = 0 }) => margin};
 `;
 
 const Col = styled.div`
@@ -13,6 +14,7 @@ const Col = styled.div`
   justify-content: ${({ justify = "initial" }) => justify};
   flex-direction: ${({ column = false }) => (column ? "column" : "initial")};
   padding: ${({ padding = 0 }) => padding};
+  min-width: ${({ minWidth = "initial" }) => minWidth};
 
   @media ${({ theme: { media } }) => media.mobile} {
     flex: ${({ sm = 1 }) => sm};

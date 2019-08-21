@@ -20,7 +20,7 @@ const Button = styled.button`
       : "5px 10px"};
   background-color: ${({ theme, bgColor = "blue", outline = false }) =>
     outline ? "transparent" : theme[bgColor]};
-  color: ${({ theme, color = "blue" }) => theme[color]};
+  color: ${({ theme, color = "white" }) => theme[color]};
   border: 2px solid ${({ theme, bgColor = "blue" }) => theme[bgColor]};
   border-radius: 3px;
   cursor: pointer;
@@ -32,6 +32,10 @@ const Button = styled.button`
     background-color: transparent;
     box-shadow: ${({ theme, outline, color }) =>
       !outline ? "none" : `0 0 3px 2px ${theme[color]}`};
+  }
+
+  &:focus {
+    outline: none;
   }
 `;
 

@@ -3,26 +3,26 @@
     {
       "title": "Hotel Eva",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/static/eva-faro.jpeg"
+      "images": ["/static/eva-faro.jpeg", "/static/hotel-tivoli.jpg"]
     },
     {
       "title": "Hotel Tivoli",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/static/hotel-tivoli.jpg"
+      "images": ["/static/hotel-tivoli.jpg"]
     }
   ],
   "painting": [
     {
       "title": "Hotel Eva",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/static/eva-faro.jpeg"
+      "images": ["/static/eva-faro.jpeg"]
     }
   ],
   "remodeling": [
     {
       "title": "Hotel Eva",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/static/eva-faro.jpeg"
+      "images": ["/static/eva-faro.jpeg"]
     }
   ]
 }

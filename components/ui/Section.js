@@ -5,8 +5,8 @@ import { Divider } from "./Divider";
 const Section = styled.section`
   position: ${({ relative = false }) => (relative ? "relative" : "initial")};
   display: ${({ noFlex = false }) => (noFlex ? "initial" : "flex")};
-  flex-direction: column;
-  align-items: center;
+  flex-direction: ${({ row = false }) => (row ? "row" : "column")};
+  align-items: ${({ align = "center" }) => align};
   justify-content: ${({ justify = "initial" }) => justify};
   padding: ${({ padding = "50px 20px" }) => padding};
   height: ${({ height = "initial" }) => height};
