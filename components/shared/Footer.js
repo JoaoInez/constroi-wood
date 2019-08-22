@@ -144,8 +144,9 @@ const Footer = () => (
         <Form
           name="contacto"
           method="post"
-          data-netlify="true"
+          netlify
           data-netlify-honeypot="bot-field"
+          // action="/custom-pages/success"
         >
           <Input type="hidden" name="form-name" value="contact" />
           <Input type="text" name="nome" placeholder="Nome" />
