@@ -242,7 +242,7 @@ const Homepage = () => {
       <Section height="calc(100vh - 73px)" bgColor="black" padding={0} relative>
         <SectionImage url="/static/stock-const-1.jpg" />
         <SectionContent margin>
-          <Title color="white">Sample title</Title>
+          <Title color="white">ConstroiWood</Title>
           <Divider width="100px" color="white" margin="0 0 30px 0" />
           <P color="white" align="center" width="600px">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
