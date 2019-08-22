@@ -141,7 +141,7 @@ const Footer = () => (
         <FormTitle h={3} color="white">
           Contacte-nos
         </FormTitle>
-        {/* <Form
+        <Form
           name="contacto"
           method="post"
           data-netlify="true"
@@ -155,7 +155,7 @@ const Footer = () => (
           <Button bgColor="green" type="submit">
             Enviar
           </Button>
-        </Form> */}
+        </Form>
       </Col>
     </Row>
   </SFooter>
