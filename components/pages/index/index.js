@@ -24,6 +24,8 @@ import WideCard from "./ProjectCard";
 const Title = styled(H)`
   font-size: 2.6rem;
   margin: 0 0 30px 0;
+  max-width: 500px;
+  text-align: center;
 `;
 
 const ServiceIcon = css`
@@ -242,13 +244,11 @@ const Homepage = () => {
       <Section height="calc(100vh - 73px)" bgColor="black" padding={0} relative>
         <SectionImage url="/static/stock-const-1.jpg" />
         <SectionContent margin>
-          <Title color="white">ConstroiWood</Title>
+          <Title color="white">Carpintaria, pinturas e remodelações</Title>
           <Divider width="100px" color="white" margin="0 0 30px 0" />
           <P color="white" align="center" width="600px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Oferecemos soluções para os vossos projectos de pequena e grande
+            dimensão. Construímos o que o cliente idealiza.
           </P>
           <ContactButton
             color="white"
