@@ -104,11 +104,6 @@ const Footer = () => (
       </p>
       <p>
         <label>
-          Assunto: <input type="text" name="about" />
-        </label>
-      </p>
-      <p>
-        <label>
           Email: <input type="email" name="email" />
         </label>
       </p>

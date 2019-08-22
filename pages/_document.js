@@ -37,7 +37,6 @@ export default class MyDocument extends Document {
           <NextScript />
           <form name="contact" netlify netlify-honeypot="bot-field" hidden>
             <input type="text" name="name" />
-            <input type="text" name="about" />
             <input type="email" name="email" />
             <textarea name="message" />
           </form>
