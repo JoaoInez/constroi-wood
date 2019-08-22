@@ -95,26 +95,18 @@ const Footer = () => (
         </Nav>
       </Col>
     </Row>
-    <form name="contacto" method="post">
+    <form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label>
-          Nome: <input type="text" name="name" />
-        </label>
-      </p>
-      <p>
-        <label>
-          Email: <input type="email" name="email" />
-        </label>
-      </p>
-      <p>
-        <label>
-          Mensagem: <textarea name="message" />
-        </label>
-      </p>
-      <p>
-        <button type="submit">Enviar</button>
-      </p>
+      <input type="text" name="name" placeholder="name" />
+      <input type="email" name="email" placeholder="email" />
+      <input type="text" name="about" placeholder="about" />
+      <textarea name="message" placeholder="message" />
+      <button type="submit">Send</button>
     </form>
   </SFooter>
 );
