@@ -147,7 +147,7 @@ const Footer = () => (
           netlify
           data-netlify-honeypot="bot-field"
         >
-          <Input type="hidden" name="form-name" value="contacto" />
+          <input type="hidden" name="form-name" value="contacto" />
           <Input type="text" name="nome" placeholder="Nome" />
           <Input type="email" name="email" placeholder="Email" />
           <Input type="text" name="assunto" placeholder="Assunto" />
