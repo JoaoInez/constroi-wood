@@ -142,16 +142,16 @@ const Footer = () => (
           Contacte-nos
         </FormTitle>
         <Form
-          name="contact"
+          name="contacto"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
           <Input type="hidden" name="form-name" value="contact" />
-          <Input type="text" name="name" placeholder="Nome" />
+          <Input type="text" name="nome" placeholder="Nome" />
           <Input type="email" name="email" placeholder="Email" />
-          <Input type="text" name="about" placeholder="Assunto" />
-          <TextArea name="message" placeholder="Mensagem" rows="4" />
+          <Input type="text" name="assunto" placeholder="Assunto" />
+          <TextArea name="mensagem" placeholder="Mensagem" rows="4" />
           <Button bgColor="green" type="submit">
             Enviar
           </Button>
