@@ -95,7 +95,7 @@ const Footer = () => (
         </Nav>
       </Col>
     </Row>
-    <form name="contact" method="post">
+    <form name="contacto" method="post">
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
