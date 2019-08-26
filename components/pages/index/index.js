@@ -58,7 +58,7 @@ const ContactButton = styled(Button)`
   transition: box-shadow 0.1s ease-in-out;
 
   &:active {
-    box-shadow: 0 0 6px 3px ${({ theme }) => theme.blue};
+    opacity: 0.8;
   }
 
   ${P} {
@@ -74,8 +74,8 @@ const ContactButton = styled(Button)`
     pointer-events: none;
     animation-delay: ${({ state }) => (state === "blur" ? "0.15s" : 0)};
 
-    &:hover {
-      animation-name: hover;
+    @media ${({ theme: { media } }) => media.mobile} {
+      animation-name: none;
     }
 
     @keyframes text_hover_v {
@@ -115,6 +115,10 @@ const ContactButton = styled(Button)`
     animation-fill-mode: both;
     animation-delay: ${({ state }) => (state === "blur" ? 0 : "0.15s")};
 
+    @media ${({ theme: { media } }) => media.mobile} {
+      animation-name: none;
+    }
+
     @keyframes arrow_hover_h {
       from {
         transform: translateY(-50px);
@@ -143,7 +147,7 @@ const PortfolioButton = styled(Button)`
   transition: box-shadow 0.1s ease-in-out;
 
   &:active {
-    box-shadow: 0 0 6px 3px ${({ theme }) => theme.blue};
+    opacity: 0.8;
   }
 
   ${P} {
@@ -158,8 +162,8 @@ const PortfolioButton = styled(Button)`
     pointer-events: none;
     animation-delay: ${({ state }) => (state === "blur" ? "0.15s" : 0)};
 
-    &:hover {
-      animation-name: hover;
+    @media ${({ theme: { media } }) => media.mobile} {
+      animation-name: none;
     }
 
     @keyframes text_hover {
@@ -200,6 +204,10 @@ const PortfolioButton = styled(Button)`
     animation-fill-mode: both;
     animation-delay: ${({ state }) => (state === "blur" ? 0 : "0.15s")};
     opacity: 0;
+
+    @media ${({ theme: { media } }) => media.mobile} {
+      animation-name: none;
+    }
 
     @keyframes arrow_hover {
       from {

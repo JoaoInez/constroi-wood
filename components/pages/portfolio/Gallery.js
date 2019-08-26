@@ -134,7 +134,7 @@ const ImageContainer = styled.div`
 const ImageCount = styled(P)`
   position: absolute;
   bottom: -20px;
-  right: -5px;
+  right: 5px;
 `;
 
 const Gallery = ({ open, images, close }) => {
