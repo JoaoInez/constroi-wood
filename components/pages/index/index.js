@@ -1,16 +1,9 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import styled, { css } from "styled-components";
-import { Bath } from "styled-icons/fa-solid/Bath";
-import { PaintRoller } from "styled-icons/fa-solid/PaintRoller";
-import { Hammer } from "styled-icons/fa-solid/Hammer";
-import { LongArrowAltRight } from "styled-icons/fa-solid/LongArrowAltRight";
-import { LongArrowAltDown } from "styled-icons/fa-solid/LongArrowAltDown";
 import portfolio from "../../../data/portfolio.json";
 import {
   H,
   P,
-  Button,
   Row,
   Col,
   Section,
@@ -20,222 +13,18 @@ import {
 } from "../../ui";
 import Card from "./ServiceCard";
 import WideCard from "./ProjectCard";
-
-const Title = styled(H)`
-  font-size: 2.6rem;
-  margin: 0 0 30px 0;
-  max-width: 500px;
-  text-align: center;
-`;
-
-const ServiceIcon = css`
-  width: 50px;
-  color: ${({ theme }) => theme.blue};
-`;
-
-const HammerIcon = styled(Hammer)`
-  ${ServiceIcon}
-`;
-
-const PaintRollerIcon = styled(PaintRoller)`
-  ${ServiceIcon}
-`;
-
-const BathIcon = styled(Bath)`
-  ${ServiceIcon}
-`;
-
-const ArrowRightIcon = styled(LongArrowAltRight)`
-  width: 20px;
-  margin-left: 10px;
-`;
-
-const ArrowDownIcon = styled(LongArrowAltDown)``;
-
-const ContactButton = styled(Button)`
-  overflow: hidden;
-  position: relative;
-  transition: box-shadow 0.1s ease-in-out;
-
-  &:active {
-    opacity: 0.8;
-  }
-
-  ${P} {
-    text-shadow: none;
-    animation-name: ${({ state }) =>
-      state === "hover"
-        ? "text_hover_v"
-        : state === "blur"
-        ? "text_blur_v"
-        : "none"};
-    animation-duration: 0.2s;
-    animation-fill-mode: both;
-    pointer-events: none;
-    animation-delay: ${({ state }) => (state === "blur" ? "0.15s" : 0)};
-
-    @media ${({ theme: { media } }) => media.mobile} {
-      animation-name: none;
-    }
-
-    @keyframes text_hover_v {
-      from {
-        transform: translateY(0);
-      }
-
-      to {
-        transform: translateY(40px);
-      }
-    }
-
-    @keyframes text_blur_v {
-      from {
-        transform: translateY(40px);
-      }
-
-      to {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  ${ArrowDownIcon} {
-    position: absolute;
-    height: 40px;
-    top: 10px;
-    transform: translateY(-50px);
-    right: calc(50% - 10px);
-    animation-name: ${({ state }) =>
-      state === "hover"
-        ? "arrow_hover_h"
-        : state === "blur"
-        ? "arrow_blur_h"
-        : "none"};
-    animation-duration: 0.2s;
-    animation-fill-mode: both;
-    animation-delay: ${({ state }) => (state === "blur" ? 0 : "0.15s")};
-
-    @media ${({ theme: { media } }) => media.mobile} {
-      animation-name: none;
-    }
-
-    @keyframes arrow_hover_h {
-      from {
-        transform: translateY(-50px);
-      }
-
-      to {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes arrow_blur_h {
-      from {
-        transform: translateY(0);
-      }
-
-      to {
-        transform: translateY(-50px);
-      }
-    }
-  }
-`;
-
-const PortfolioButton = styled(Button)`
-  overflow: hidden;
-  position: relative;
-  transition: box-shadow 0.1s ease-in-out;
-
-  &:active {
-    opacity: 0.8;
-  }
-
-  ${P} {
-    animation-name: ${({ state }) =>
-      state === "hover"
-        ? "text_hover"
-        : state === "blur"
-        ? "text_blur"
-        : "none"};
-    animation-duration: 0.2s;
-    animation-fill-mode: both;
-    pointer-events: none;
-    animation-delay: ${({ state }) => (state === "blur" ? "0.15s" : 0)};
-
-    @media ${({ theme: { media } }) => media.mobile} {
-      animation-name: none;
-    }
-
-    @keyframes text_hover {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-10px);
-        color: ${({ theme, bgColor }) => theme[bgColor]};
-      }
-    }
-
-    @keyframes text_blur {
-      from {
-        transform: translateX(-10px);
-      }
-
-      to {
-        transform: translateX(0);
-        color: ${({ theme, color }) => theme[color]};
-      }
-    }
-  }
-
-  ${ArrowRightIcon} {
-    position: absolute;
-    height: 40px;
-    top: 10px;
-    right: 20px;
-    animation-name: ${({ state }) =>
-      state === "hover"
-        ? "arrow_hover"
-        : state === "blur"
-        ? "arrow_blur"
-        : "none"};
-    animation-duration: 0.2s;
-    animation-fill-mode: both;
-    animation-delay: ${({ state }) => (state === "blur" ? 0 : "0.15s")};
-    opacity: 0;
-
-    @media ${({ theme: { media } }) => media.mobile} {
-      animation-name: none;
-    }
-
-    @keyframes arrow_hover {
-      from {
-        right: 20px;
-        opacity: 0;
-      }
-
-      to {
-        right: 10px;
-        opacity: 1;
-      }
-    }
-
-    @keyframes arrow_blur {
-      from {
-        right: 10px;
-        opacity: 1;
-      }
-
-      to {
-        right: 20px;
-        opacity: 0;
-      }
-    }
-  }
-`;
-
-const BottomAnchor = styled.div``;
+import {
+  ContactButton,
+  ArrowDownIcon,
+  Title,
+  ServiceIconWrapper,
+  HammerIcon,
+  PaintRollerIcon,
+  BathIcon,
+  PortfolioButton,
+  ArrowRightIcon,
+  BottomAnchor
+} from "./styles";
 
 const Homepage = () => {
   const bottomRef = useRef();
@@ -250,7 +39,7 @@ const Homepage = () => {
   return (
     <>
       <Section height="calc(100vh - 73px)" bgColor="black" padding={0} relative>
-        <SectionImage url="/static/stock-const-1.jpg" />
+        <SectionImage url="/static/kitchen.jpg" />
         <SectionContent margin>
           <Title color="white">Carpintaria, pinturas e remodelações</Title>
           <Divider width="100px" color="white" margin="0 0 30px 0" />
@@ -279,44 +68,55 @@ const Homepage = () => {
         <Row maxWidth="1000px">
           <Col flex justify="center">
             <Card>
-              <HammerIcon />
+              <ServiceIconWrapper>
+                <HammerIcon />
+              </ServiceIconWrapper>
               <H h={4} align="center">
                 Carpintaria
               </H>
-              <P align="center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </P>
+              <P align="center">Fornecimento e montagem</P>
+              <P align="center">Pavimento flutuante</P>
+              <P align="center">Cozinhas</P>
+              <P align="center">Forras de tectos e paredes</P>
+              <P align="center">Escadas e degraus em madeira</P>
             </Card>
           </Col>
           <Col flex justify="center">
             <Card>
-              <PaintRollerIcon />
+              <ServiceIconWrapper>
+                <PaintRollerIcon />
+              </ServiceIconWrapper>
               <H h={4} align="center">
                 Pinturas
               </H>
               <P align="center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Todo o tipo de serviço de pintura de construção civil
               </P>
+              <P align="center">
+                Pinturas internas/externas em moradias, apartamentos, e comércio
+              </P>
+              <P align="center">Lacagens e evernizamentos</P>
             </Card>
           </Col>
           <Col flex justify="center">
             <Card>
-              <BathIcon />
+              <ServiceIconWrapper>
+                <BathIcon />
+              </ServiceIconWrapper>
               <H h={4} align="center">
                 Remodelações
               </H>
+              <P align="center">Remodelações e recuperação de imóveis</P>
+              <P align="center">Reparações pontuais</P>
               <P align="center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Reabilitação e manutenção de edifícios e infra-estruturas
               </P>
             </Card>
           </Col>
         </Row>
       </Section>
       <Section height="200px" bgColor="black" padding={0} relative>
-        <SectionImage url="/static/stock-carp-1.jpg" />
+        <SectionImage url="/static/carpenter-stock.jpg" />
         <SectionContent margin>
           <P color="white" width="500px">
             <i>
@@ -327,7 +127,7 @@ const Homepage = () => {
         </SectionContent>
       </Section>
       <Section padding="20px 0 50px 0">
-        <H>Projectos</H>
+        <H>Projectos em destaque</H>
         <Divider width="33%" margin="0 0 30px 0" />
         <WideCard
           image={portfolio.carpentry[0].images[0]}
@@ -335,16 +135,15 @@ const Homepage = () => {
           description={portfolio.carpentry[0].description}
         />
         <WideCard
-          image={portfolio.carpentry[1].images[0]}
-          title={portfolio.carpentry[1].title}
-          description={portfolio.carpentry[1].description}
+          image={portfolio.painting[0].images[0]}
+          title={portfolio.painting[0].title}
+          description={portfolio.painting[0].description}
         />
         <Link href="/portfolio">
           <a>
             <PortfolioButton
               color="white"
               size="lg"
-              margin="30px 0 0 0"
               bgColor="blue"
               state={portfolioBtn}
               onMouseEnter={() => setPortfolioBtn("hover")}

@@ -55,8 +55,10 @@ const CloseArea = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 `;
 
 const Icon = css`
@@ -151,7 +153,7 @@ const Gallery = ({ open, images, close }) => {
   };
 
   const dec = () => {
-    const newIndex = index - 1 < 0 ? images.length : index - 1;
+    const newIndex = index - 1 < 0 ? images.length - 1 : index - 1;
     setIndex(newIndex);
   };
 
