@@ -8,6 +8,10 @@ const WideCard = styled.div`
   overflow: hidden;
   box-shadow: 0 2px 8px ${({ theme }) => theme.lightShadow};
   margin: 20px 40px;
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 50px;
+  }
 `;
 
 const ProjectImage = styled.div`

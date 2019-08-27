@@ -10,13 +10,12 @@ function Meta() {
       />
       <meta
         name="description"
-        content="Website de ConstroiWood, empresa de carpintaria, pintura de remodelações"
+        content="ConstroiWood, empresa de construção civil, carpintaria, remodelações e reabilitações de edifícios."
       />
       <meta
         name="keywords"
         content="carpintaria, pintura, remodelações, constroiwood, woodconstroi"
       />
-      <meta name="author" content="John Doe" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <title>ConstroiWood</title>
     </Head>

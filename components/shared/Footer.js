@@ -41,7 +41,7 @@ const Logo = styled.div`
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  margin-right: 10px;
+  margin: 10px 0 25px 0;
 `;
 
 const Nav = styled.nav`
@@ -58,7 +58,10 @@ const Nav = styled.nav`
     }
 
     &:hover ${P} {
-      color: ${({ theme }) => theme.darkGrey};
+      @media ${({ theme: { media } }) => media.laptop},
+        ${({ theme: { media } }) => media.desktop} {
+        color: ${({ theme }) => theme.darkGrey};
+      }
     }
   }
 `;
@@ -130,7 +133,7 @@ const Footer = () => (
           </Col>
         </Row>
         <Row>
-          <Col flex align="center" justify="center" sm={0}>
+          <Col flex align="center" justify="center">
             <Logo>
               <HammerIcon />
             </Logo>
@@ -151,7 +154,7 @@ const Footer = () => (
           <Input type="text" name="nome" placeholder="Nome" />
           <Input type="email" name="email" placeholder="Email" />
           <Input type="text" name="assunto" placeholder="Assunto" />
-          <TextArea name="mensagem" placeholder="Mensagem" rows="4" />
+          <TextArea name="mensagem" placeholder="Mensagem" rows="5" />
           <Button bgColor="green" type="submit">
             Enviar
           </Button>

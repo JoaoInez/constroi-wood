@@ -41,12 +41,15 @@ const LogoLink = styled.a`
   cursor: pointer;
 
   &:hover {
-    ${Logo} {
-      background-color: ${({ theme }) => theme.blue};
-    }
+    @media ${({ theme: { media } }) => media.laptop},
+      ${({ theme: { media } }) => media.desktop} {
+      ${Logo} {
+        background-color: ${({ theme }) => theme.blue};
+      }
 
-    ${HammerIcon} {
-      color: ${({ theme }) => theme.white};
+      ${HammerIcon} {
+        color: ${({ theme }) => theme.white};
+      }
     }
   }
 `;

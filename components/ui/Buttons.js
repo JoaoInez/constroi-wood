@@ -27,16 +27,11 @@ const Button = styled.button`
   transition: all 0.15s ease-in-out;
 
   &:hover {
-    color: ${({ theme, outline, color, bgColor }) =>
-      !outline ? theme[bgColor] : theme[color]};
-    background-color: transparent;
-    box-shadow: ${({ theme, outline, color }) =>
-      !outline ? "none" : `0 0 3px 2px ${theme[color]}`};
-
-    @media ${({ theme: { media } }) => media.mobile} {
-      color: ${({ theme, color = "white" }) => theme[color]};
-      background-color: ${({ theme, bgColor = "blue", outline = false }) =>
-        outline ? "transparent" : theme[bgColor]};
+    @media ${({ theme: { media } }) => media.laptop},
+      ${({ theme: { media } }) => media.desktop} {
+      color: ${({ theme, outline, color, bgColor }) =>
+        !outline ? theme[bgColor] : theme[color]};
+      background-color: transparent;
       box-shadow: ${({ theme, outline, color }) =>
         !outline ? "none" : `0 0 3px 2px ${theme[color]}`};
     }
