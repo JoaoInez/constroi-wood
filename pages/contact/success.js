@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { LongArrowAltLeft } from "styled-icons/fa-solid/LongArrowAltLeft";
-import { H, P } from "../components/ui";
+import { H, P } from "../../components/ui";
 
 const Container = styled.section`
-  height: 100vh;
+  height: calc(100vh - 68px);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,6 +20,8 @@ const Card = styled.div`
   background-color: ${({ theme }) => theme.white};
   padding: 20px;
   max-width: 400px;
+  border-top: 4px solid ${({ theme }) => theme.blue};
+  margin: 0 20px;
 `;
 
 const Title = styled(H)`
@@ -39,7 +41,7 @@ const A = styled.a`
 const LeftArrowIcon = styled(LongArrowAltLeft)`
   height: 20px;
   margin-right: 10px;
-  color: ${({ theme }) => theme.green};
+  color: ${({ theme }) => theme.blue};
 `;
 
 const success = () => {
@@ -55,7 +57,7 @@ const success = () => {
         <Link href="/" as="/">
           <A>
             <LeftArrowIcon />
-            <P bold color="green">
+            <P bold color="blue">
               Voltar para o nosso site
             </P>
           </A>
