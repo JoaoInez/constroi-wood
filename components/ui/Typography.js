@@ -22,6 +22,7 @@ const P = styled.p`
   padding: 0;
   text-align: ${({ align = "initial" }) => align};
   max-width: ${({ width = "800px" }) => width};
+  font-weight: ${({ bold = false }) => (bold ? "bold" : "400")};
 `;
 
 export { H, P };
