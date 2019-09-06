@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import portfolio from "../../../data/portfolio.json";
+import content from "../../../content/home.md";
 import {
   H,
   P,

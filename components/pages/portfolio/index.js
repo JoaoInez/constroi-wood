@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Section, H, Divider } from "../../ui";
 import { carpentry, painting, remodeling } from "../../../data/portfolio.json";
+// import carpentry from "../../../content/portfolio/carpentry.md";
+// import painting from "../../../content/portfolio/painting.md";
+// import remodeling from "../../../content/portfolio/remodeling.md";
 import Card from "./Card";
 import Gallery from "./Gallery";
 
