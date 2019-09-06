@@ -24,18 +24,14 @@ quote: >-
   tempor incididunt ut labore et dolore magna aliqua."
 projects:
   project1:
-    description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+    description: sample
     image: >-
       https://res.cloudinary.com/dtwg1sqct/image/upload/c_fill,h_200,w_300/v1567804197/carpintaria/aeroporto-faro/aeroporto-faro-2_onllld.jpg
-    name: Aeroporto Faro
+    name: sample
   project2:
-    description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+    description: sample text
     image: >-
       https://res.cloudinary.com/dtwg1sqct/image/upload/c_fill,h_200,w_300/v1567804353/pinturas/moradias-casas-do-rio-alhandra/alhandra-1_utmczb.jpg
-    name: Moradia Casas do Rio Alhandra
+    name: sample
 ---
 
