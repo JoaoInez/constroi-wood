@@ -25,8 +25,9 @@ const ProjectImage = styled.div`
 `;
 
 const ProjectContent = styled.div`
-  padding: 10px 40px;
+  padding: 10px 40px 20px 40px;
   min-width: 200px;
+  max-width: 600px;
 `;
 
 const ProjectCard = ({ image, title, description }) => (
