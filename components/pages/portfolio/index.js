@@ -32,24 +32,42 @@ const Portfolio = () => {
         <Divider width="33%" margin="0 0 20px 0" />
         <Row>
           {carpentry &&
-            carpentry.map(({ gallery, name }, i) => (
-              <Card key={i} images={gallery} title={name} open={setOpen} />
+            carpentry.map(({ gallery, name, ongoing }, i) => (
+              <Card
+                key={i}
+                images={gallery}
+                title={name}
+                open={setOpen}
+                ongoing={ongoing}
+              />
             ))}
         </Row>
         <H>Pinturas</H>
         <Divider width="33%" margin="0 0 20px 0" />
         <Row>
           {painting &&
-            painting.map(({ gallery, name }, i) => (
-              <Card key={i} images={gallery} title={name} open={setOpen} />
+            painting.map(({ gallery, name, ongoing }, i) => (
+              <Card
+                key={i}
+                images={gallery}
+                title={name}
+                open={setOpen}
+                ongoing={ongoing}
+              />
             ))}
         </Row>
         <H>Remodelações</H>
         <Divider width="33%" margin="0 0 20px 0" />
         <Row>
           {remodeling &&
-            remodeling.map(({ gallery, name }, i) => (
-              <Card key={i} images={gallery} title={name} open={setOpen} />
+            remodeling.map(({ gallery, name, ongoing }, i) => (
+              <Card
+                key={i}
+                images={gallery}
+                title={name}
+                open={setOpen}
+                ongoing={ongoing}
+              />
             ))}
         </Row>
       </Section>
