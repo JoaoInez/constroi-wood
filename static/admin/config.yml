@@ -51,7 +51,9 @@ collections:
                 require: false
                 media_library:
                   config:
-                    multiple: true
+                    - multiple: true
+                      default_transformations:
+                        - - width: auto
       - name: "painting"
         label: "Pinturas"
         file: "content/portfolio/painting.md"
@@ -85,7 +87,9 @@ collections:
                 require: false
                 media_library:
                   config:
-                    multiple: true
+                    - multiple: true
+                      default_transformations:
+                        - - width: auto
       - name: "remodeling"
         label: "Remodelações"
         file: "content/portfolio/remodeling.md"
@@ -119,7 +123,9 @@ collections:
                 require: false
                 media_library:
                   config:
-                    multiple: true
+                    - multiple: true
+                      default_transformations:
+                        - - width: auto
   - name: "home"
     label: "Página Inicial"
     editor:

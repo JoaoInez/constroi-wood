@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import portfolio from "../../../data/portfolio.json";
+import * as R from "ramda";
 import content from "../../../content/home.md";
 import {
   H,
@@ -27,6 +27,8 @@ import {
   BottomAnchor
 } from "./styles";
 
+console.log(content);
+
 const Homepage = () => {
   const bottomRef = useRef();
 
@@ -42,11 +44,12 @@ const Homepage = () => {
       <Section height="calc(100vh - 73px)" bgColor="black" padding={0} relative>
         <SectionImage url="/static/kitchen.jpg" />
         <SectionContent margin>
-          <Title color="white">Carpintaria, pinturas e remodelações</Title>
+          <Title color="white">
+            {R.pathOr("", ["attributes", "main", "title"])(content)}
+          </Title>
           <Divider width="100px" color="white" margin="0 0 30px 0" />
           <P color="white" align="center" width="600px">
-            Oferecemos soluções para os vossos projectos de pequena e grande
-            dimensão. Construímos o que o cliente idealiza.
+            {R.pathOr("", ["attributes", "main", "description"])(content)}
           </P>
           <ContactButton
             color="white"
@@ -75,11 +78,13 @@ const Homepage = () => {
               <H h={4} align="center">
                 Carpintaria
               </H>
-              <P align="center">Fornecimento e montagem</P>
-              <P align="center">Pavimento flutuante</P>
-              <P align="center">Cozinhas</P>
-              <P align="center">Forras de tectos e paredes</P>
-              <P align="center">Escadas e degraus em madeira</P>
+              {R.pathOr([], ["attributes", "services", "carpentry"])(
+                content
+              ).map((service, i) => (
+                <P align="center" key={i}>
+                  {service}
+                </P>
+              ))}
             </Card>
           </Col>
           <Col flex justify="center">
@@ -90,13 +95,13 @@ const Homepage = () => {
               <H h={4} align="center">
                 Pinturas
               </H>
-              <P align="center">
-                Todo o tipo de serviço de pintura de construção civil
-              </P>
-              <P align="center">
-                Pinturas internas/externas em moradias, apartamentos, e comércio
-              </P>
-              <P align="center">Lacagens e evernizamentos</P>
+              {R.pathOr([], ["attributes", "services", "painting"])(
+                content
+              ).map((service, i) => (
+                <P align="center" key={i}>
+                  {service}
+                </P>
+              ))}
             </Card>
           </Col>
           <Col flex justify="center">
@@ -107,11 +112,13 @@ const Homepage = () => {
               <H h={4} align="center">
                 Remodelações
               </H>
-              <P align="center">Remodelações e recuperação de imóveis</P>
-              <P align="center">Reparações pontuais</P>
-              <P align="center">
-                Reabilitação e manutenção de edifícios e infra-estruturas
-              </P>
+              {R.pathOr([], ["attributes", "services", "remodeling"])(
+                content
+              ).map((service, i) => (
+                <P align="center" key={i}>
+                  {service}
+                </P>
+              ))}
             </Card>
           </Col>
         </Row>
@@ -120,10 +127,7 @@ const Homepage = () => {
         <SectionImage url="/static/carpenter-stock.jpg" />
         <SectionContent margin>
           <P color="white" width="500px">
-            <i>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            </i>
+            <i>{R.pathOr("", ["attributes", "quote"])(content)}</i>
           </P>
         </SectionContent>
       </Section>
@@ -131,14 +135,32 @@ const Homepage = () => {
         <H>Projectos em destaque</H>
         <Divider width="33%" margin="0 0 30px 0" />
         <WideCard
-          image={portfolio.carpentry[0].images[0]}
-          title={portfolio.carpentry[0].title}
-          description={portfolio.carpentry[0].description}
+          image={R.pathOr("", ["attributes", "projects", "project1", "image"])(
+            content
+          )}
+          title={R.pathOr("", ["attributes", "projects", "project1", "name"])(
+            content
+          )}
+          description={R.pathOr("", [
+            "attributes",
+            "projects",
+            "project1",
+            "description"
+          ])(content)}
         />
         <WideCard
-          image={portfolio.painting[0].images[0]}
-          title={portfolio.painting[0].title}
-          description={portfolio.painting[0].description}
+          image={R.pathOr("", ["attributes", "projects", "project2", "image"])(
+            content
+          )}
+          title={R.pathOr("", ["attributes", "projects", "project2", "name"])(
+            content
+          )}
+          description={R.pathOr("", [
+            "attributes",
+            "projects",
+            "project2",
+            "description"
+          ])(content)}
         />
         <Link href="/portfolio">
           <a>
