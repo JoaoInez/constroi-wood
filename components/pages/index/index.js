@@ -27,8 +27,6 @@ import {
   BottomAnchor
 } from "./styles";
 
-console.log(content);
-
 const Homepage = () => {
   const bottomRef = useRef();
 

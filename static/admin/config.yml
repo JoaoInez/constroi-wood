@@ -32,6 +32,7 @@ collections:
               - name: "ongoing"
                 label: "Em curso"
                 widget: "boolean"
+                default: false
               - name: "description"
                 label: "Descrição"
                 widget: "text"
@@ -68,6 +69,7 @@ collections:
               - name: "ongoing"
                 label: "Em curso"
                 widget: "boolean"
+                default: false
               - name: "description"
                 label: "Descrição"
                 widget: "text"
@@ -104,6 +106,7 @@ collections:
               - name: "ongoing"
                 label: "Em curso"
                 widget: "boolean"
+                default: false
               - name: "description"
                 label: "Descrição"
                 widget: "text"
