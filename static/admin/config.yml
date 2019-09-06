@@ -1,0 +1,202 @@
+backend:
+  name: test-repo
+  branch: master
+media_folder: static/img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: "dtwg1sqct"
+    api_key: "168559511113516"
+    config:
+      default_transformations:
+        - - fetch_format: auto
+            quality: auto
+display_url: https://constroiwood.netlify.com
+collections:
+  - name: "portfolio"
+    label: "Portfólio"
+    editor:
+      preview: false
+    files:
+      - name: "carpentry"
+        label: "Carpintaria"
+        file: "content/portfolio/carpentry.md"
+        fields:
+          - name: "carpentry"
+            label: "Projectos"
+            widget: "list"
+            fields:
+              - name: "name"
+                label: "Nome"
+                widget: "string"
+              - name: "ongoing"
+                label: "Em curso"
+                widget: "boolean"
+              - name: "description"
+                label: "Descrição"
+                widget: "text"
+                required: false
+              - name: "thumbnail"
+                label: "Imagem principal"
+                widget: "image"
+                media_library:
+                  config:
+                    default_transformations:
+                      - - width: 300
+                          height: 200
+                          crop: fill
+              - name: "gallery"
+                label: "Galeria"
+                widget: "image"
+                require: false
+                media_library:
+                  config:
+                    multiple: true
+      - name: "painting"
+        label: "Pinturas"
+        file: "content/portfolio/painting.md"
+        fields:
+          - name: "painting"
+            label: "Projectos"
+            widget: "list"
+            fields:
+              - name: "name"
+                label: "Nome"
+                widget: "string"
+              - name: "ongoing"
+                label: "Em curso"
+                widget: "boolean"
+              - name: "description"
+                label: "Descrição"
+                widget: "text"
+                required: false
+              - name: "thumbnail"
+                label: "Imagem principal"
+                widget: "image"
+                media_library:
+                  config:
+                    default_transformations:
+                      - - width: 300
+                          height: 200
+                          crop: fill
+              - name: "gallery"
+                label: "Galeria"
+                widget: "image"
+                require: false
+                media_library:
+                  config:
+                    multiple: true
+      - name: "remodeling"
+        label: "Remodelações"
+        file: "content/portfolio/remodeling.md"
+        fields:
+          - name: "remodeling"
+            label: "Projectos"
+            widget: "list"
+            fields:
+              - name: "name"
+                label: "Nome"
+                widget: "string"
+              - name: "ongoing"
+                label: "Em curso"
+                widget: "boolean"
+              - name: "description"
+                label: "Descrição"
+                widget: "text"
+                required: false
+              - name: "thumbnail"
+                label: "Imagem principal"
+                widget: "image"
+                media_library:
+                  config:
+                    default_transformations:
+                      - - width: 300
+                          height: 200
+                          crop: fill
+              - name: "gallery"
+                label: "Galeria"
+                widget: "image"
+                require: false
+                media_library:
+                  config:
+                    multiple: true
+  - name: "home"
+    label: "Página Inicial"
+    editor:
+      preview: false
+    files:
+      - name: "home"
+        label: "Página Inicial"
+        file: "content/home.md"
+        fields:
+          - name: "main"
+            label: "Secção inicial"
+            widget: "object"
+            fields:
+              - name: "title"
+                label: "Título"
+                widget: "string"
+              - name: "description"
+                label: "Descrição"
+                widget: "text"
+          - name: "services"
+            label: "Serviços"
+            widget: "object"
+            fields:
+              - name: "carpentry"
+                label: "Serviços de carpintaria"
+                widget: "list"
+                field: { label: "Serviço", name: "service", widget: "string" }
+              - name: "painting"
+                label: "Serviços de pinturas"
+                widget: "list"
+                field: { label: "Serviço", name: "service", widget: "string" }
+              - name: "remodeling"
+                label: "Serviços de remodelações"
+                widget: "list"
+                field: { label: "Serviço", name: "service", widget: "string" }
+          - name: "quote"
+            label: "Frase inspiracional"
+            widget: "text"
+          - name: "projects"
+            label: "Projectos em destaque"
+            widget: "object"
+            fields:
+              - name: "project1"
+                label: "Projecto em destaque 1"
+                widget: "object"
+                fields:
+                  - name: "name"
+                    label: "Nome"
+                    widget: "string"
+                  - name: "description"
+                    label: "Descrição"
+                    widget: "text"
+                  - name: "image"
+                    label: "Imagem"
+                    widget: "image"
+                    media_library:
+                      config:
+                        default_transformations:
+                          - - width: 300
+                              height: 200
+                              crop: fill
+              - name: "project2"
+                label: "Projecto em destaque 2"
+                widget: "object"
+                fields:
+                  - name: "name"
+                    label: "Nome"
+                    widget: "string"
+                  - name: "description"
+                    label: "Descrição"
+                    widget: "text"
+                  - name: "image"
+                    label: "Imagem"
+                    widget: "image"
+                    media_library:
+                      config:
+                        default_transformations:
+                          - - width: 300
+                              height: 200
+                              crop: fill
