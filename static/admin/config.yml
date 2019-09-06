@@ -1,6 +1,9 @@
 backend:
-  name: test-repo
+  name: git-gateway
   branch: master
+  accept_roles:
+    - admin
+    - editor
 media_folder: static/img
 media_library:
   name: cloudinary
