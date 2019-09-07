@@ -160,7 +160,7 @@ const Homepage = () => {
             "description"
           ])(content)}
         />
-        <Link href="/portfolio">
+        <Link href="/portfolio" as="/portfolio">
           <a>
             <PortfolioButton
               color="white"

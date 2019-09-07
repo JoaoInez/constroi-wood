@@ -121,12 +121,12 @@ const Footer = () => (
         <Row margin="0 0 20px 0">
           <Col>
             <Nav>
-              <Link href="/">
+              <Link href="/" as="/">
                 <a>
                   <P color="white">Home</P>
                 </a>
               </Link>
-              <Link href="/portfolio">
+              <Link href="/portfolio" as="/portfolio">
                 <a>
                   <P color="white">Portfolio</P>
                 </a>
