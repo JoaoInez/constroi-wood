@@ -82,7 +82,7 @@ const Nav = ({ router: { pathname } }) => (
   <Navbar>
     <Container>
       <Col flex padding="0 0 0 40px">
-        <Link href="/">
+        <Link href="/" as="/">
           <LogoLink>
             <Logo>
               <HammerIcon />
@@ -95,13 +95,13 @@ const Nav = ({ router: { pathname } }) => (
       </Col>
       <Col sm={0} padding="0 40px 0 0">
         <NavS>
-          <Link href="/">
+          <Link href="/" as="/">
             <A path={pathname} link="/">
               <P>Home</P>
             </A>
           </Link>
           <DotIcon />
-          <Link href="/portfolio">
+          <Link href="/portfolio" as="/portfolio">
             <A path={pathname} link="/portfolio">
               <P>Portfolio</P>
             </A>
