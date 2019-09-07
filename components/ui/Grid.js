@@ -15,6 +15,7 @@ const Col = styled.div`
   flex-direction: ${({ column = false }) => (column ? "column" : "initial")};
   padding: ${({ padding = 0 }) => padding};
   min-width: ${({ minWidth = "initial" }) => minWidth};
+  flex-wrap: ${({ wrap }) => (wrap ? "wrap" : "initial")};
 
   @media ${({ theme: { media } }) => media.mobile} {
     flex: ${({ sm = 1 }) => sm};

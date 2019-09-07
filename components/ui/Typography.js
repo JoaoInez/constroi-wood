@@ -23,6 +23,7 @@ const P = styled.p`
   text-align: ${({ align = "initial" }) => align};
   max-width: ${({ width = "800px" }) => width};
   font-weight: ${({ bold = false }) => (bold ? "bold" : "400")};
+  font-size: ${({ small }) => (small ? "0.8rem" : "inherit")};
 `;
 
 export { H, P };

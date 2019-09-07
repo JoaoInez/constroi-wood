@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Hammer } from "styled-icons/fa-solid/Hammer";
 import { At } from "styled-icons/boxicons-regular/At";
 import { Phone } from "styled-icons/boxicons-regular/Phone";
-import { P, Row, Col, Button, H } from "../ui";
+import { P, Row, Col, Button, H, Divider } from "../ui";
 
 const SFooter = styled.footer`
   background-color: ${({ theme }) => theme.darkBlue};
@@ -30,18 +30,18 @@ const PhoneIcon = styled(Phone)`
 
 const HammerIcon = styled(Hammer)`
   width: 30px;
-  color: ${({ theme }) => theme.darkGrey};
+  color: ${({ theme }) => theme.lightGrey};
 `;
 
 const Logo = styled.div`
-  border: 2.5px solid ${({ theme }) => theme.darkGrey};
+  border: 2.5px solid ${({ theme }) => theme.lightGrey};
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  margin: 10px 0 25px 0;
+  margin: 0 20px 25px 0;
 `;
 
 const Nav = styled.nav`
@@ -117,6 +117,8 @@ const Footer = () => (
               <P color="white">+351 912 345 678</P>
             </Info>
           </Col>
+        </Row>
+        <Row margin="0 0 20px 0">
           <Col>
             <Nav>
               <Link href="/">
@@ -130,13 +132,6 @@ const Footer = () => (
                 </a>
               </Link>
             </Nav>
-          </Col>
-        </Row>
-        <Row>
-          <Col flex align="center" justify="center">
-            <Logo>
-              <HammerIcon />
-            </Logo>
           </Col>
         </Row>
       </Col>
@@ -160,6 +155,17 @@ const Footer = () => (
             Enviar
           </Button>
         </Form>
+      </Col>
+    </Row>
+    <Divider width="80%" margin="40px auto" />
+    <Row maxWidth="1000px" margin="0 auto">
+      <Col flex align="center" wrap>
+        <Logo>
+          <HammerIcon />
+        </Logo>
+        <P small color="lightGrey">
+          &copy; ConstroiWood Lda. 2019. Todos os direitos reservados.
+        </P>
       </Col>
     </Row>
   </SFooter>
