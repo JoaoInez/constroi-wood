@@ -1,7 +1,9 @@
 import React from "react";
 import Head from "next/head";
+import * as R from "ramda";
+import content from "../../content/seo.md";
 
-function Meta() {
+const Meta = () => {
   return (
     <Head>
       <link
@@ -10,16 +12,16 @@ function Meta() {
       />
       <meta
         name="description"
-        content="ConstroiWood, empresa de construção civil, carpintaria, remodelações e reabilitações de edifícios."
+        content={R.pathOr("", ["attributes", "description"])(content)}
       />
       <meta
         name="keywords"
-        content="carpintaria, pintura, remodelações, constroiwood, woodconstroi"
+        content={R.pathOr("", ["attributes", "keywords"])(content)}
       />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <title>ConstroiWood</title>
     </Head>
   );
-}
+};
 
 export default Meta;

@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: master
 media_folder: static/img
 media_library:
@@ -194,3 +194,18 @@ collections:
                           - - width: 300
                               height: 200
                               crop: fill
+  - name: "seo"
+    label: "SEO"
+    editor:
+      preview: false
+    files:
+      - name: "seo"
+        label: "SEO"
+        file: "content/seo.md"
+        fields:
+          - name: "description"
+            label: "Descrição"
+            widget: "text"
+          - name: "keywords"
+            label: "Palavras chave"
+            widget: "string"
