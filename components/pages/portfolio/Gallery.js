@@ -169,7 +169,7 @@ const Gallery = ({ open, images, close }) => {
       {images.length > 0 && (
         <ImageContainer open={open} close={closeAnim}>
           <CloseIcon onClick={closeGallery} />
-          <Image src={images[index]} />
+          <Image src={images[index]} alt="" />
           <ImageCount color="white">
             {index + 1} de {images.length}
           </ImageCount>
