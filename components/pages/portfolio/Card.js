@@ -60,7 +60,7 @@ const OngoingBadge = styled.div`
   box-shadow: 0 2px 8px ${({ theme }) => theme.darkGrey};
 `;
 
-const Card = ({ images, title, open, ongoing }) => (
+const Card = ({ images, title, open, ongoing, thumbnail }) => (
   <CardS>
     {ongoing && (
       <OngoingBadge>
@@ -69,7 +69,7 @@ const Card = ({ images, title, open, ongoing }) => (
     )}
     <CardImageWrapper>
       <CardImage
-        url={images[0]}
+        url={thumbnail}
         onClick={() => open({ state: true, images })}
       />
     </CardImageWrapper>
@@ -81,7 +81,8 @@ Card.propTypes = {
   images: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   open: PropTypes.func.isRequired,
-  ongoing: PropTypes.bool.isRequired
+  ongoing: PropTypes.bool.isRequired,
+  thumbnail: PropTypes.string.isRequired
 };
 
 export default Card;
