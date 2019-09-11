@@ -32,13 +32,14 @@ const Portfolio = () => {
         <Divider width="33%" margin="0 0 20px 0" />
         <Row>
           {carpentry &&
-            carpentry.map(({ gallery, name, ongoing }, i) => (
+            carpentry.map(({ gallery, name, ongoing, thumbnail }, i) => (
               <Card
                 key={i}
                 images={gallery}
                 title={name}
                 open={setOpen}
                 ongoing={ongoing}
+                thumbnail={thumbnail}
               />
             ))}
         </Row>
@@ -46,13 +47,14 @@ const Portfolio = () => {
         <Divider width="33%" margin="0 0 20px 0" />
         <Row>
           {painting &&
-            painting.map(({ gallery, name, ongoing }, i) => (
+            painting.map(({ gallery, name, ongoing, thumbnail }, i) => (
               <Card
                 key={i}
                 images={gallery}
                 title={name}
                 open={setOpen}
                 ongoing={ongoing}
+                thumbnail={thumbnail}
               />
             ))}
         </Row>
@@ -60,13 +62,14 @@ const Portfolio = () => {
         <Divider width="33%" margin="0 0 20px 0" />
         <Row>
           {remodeling &&
-            remodeling.map(({ gallery, name, ongoing }, i) => (
+            remodeling.map(({ gallery, name, ongoing, thumbnail }, i) => (
               <Card
                 key={i}
                 images={gallery}
                 title={name}
                 open={setOpen}
                 ongoing={ongoing}
+                thumbnail={thumbnail}
               />
             ))}
         </Row>
