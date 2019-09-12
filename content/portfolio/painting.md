@@ -16,7 +16,7 @@ painting:
       - >-
         https://res.cloudinary.com/dtwg1sqct/image/upload/v1568236556/pinturas/Moradias%20Casas%20do%20Rio%20Alhandra/alhandra-1_jfuben.jpg
     name: Moradias Casa do Rio Alhandra
-    ongoing: false
+    ongoing: true
     thumbnail: >-
       https://res.cloudinary.com/dtwg1sqct/image/upload/c_fill,h_200,w_300/v1568236556/pinturas/Moradias%20Casas%20do%20Rio%20Alhandra/alhandra-1_jfuben.jpg
 ---
