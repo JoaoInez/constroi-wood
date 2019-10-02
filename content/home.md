@@ -11,6 +11,8 @@ services:
     - Cozinhas
     - Forras de tectos e paredes
     - Escadas e degraus em madeira
+    - Móveis casas de banho
+    - Roupeiros por medida
   painting:
     - Todo o tipo de serviço de pintura de construção civil
     - 'Pinturas internas/externas em moradias, apartamentos, e comércio'
