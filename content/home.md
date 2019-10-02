@@ -6,7 +6,7 @@ main:
   title: 'Carpintaria, pinturas e remodelações'
 services:
   carpentry:
-    - Fornecimento e montagem
+    - Decks em madeira e compósito
     - Pavimento flutuante
     - Cozinhas
     - Forras de tectos e paredes
