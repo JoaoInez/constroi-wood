@@ -1,0 +1,3 @@
+[[redirects]]
+  from = "https://constroiwood.netlify.com/*"
+  to = "https://constroiwood.netlify.com/* https://www.constroiwood.pt/:splat 301!"
