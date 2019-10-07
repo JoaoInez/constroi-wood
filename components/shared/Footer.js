@@ -114,7 +114,7 @@ const Footer = () => (
             </Info>
             <Info>
               <PhoneIcon />
-              <P color="white">+351 912 345 678</P>
+              <P color="white">+351 926 794 607</P>
             </Info>
           </Col>
         </Row>
