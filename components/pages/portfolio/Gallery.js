@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
@@ -59,6 +59,7 @@ const Image = styled.img`
   object-fit: contain;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.4);
+  display: ${({ showing }) => (showing ? "initial" : "none")};
 `;
 
 const Icon = css`
@@ -83,7 +84,8 @@ const CloseIcon = styled(Close)`
 const ArrowIcon = css`
   ${Icon};
   width: 50px;
-  top: calc(50% - 25px);
+  top: calc(50% - 75px);
+  padding: 50px 10px;
 `;
 
 const LeftArrowIcon = styled(KeyboardArrowLeft)`
@@ -169,7 +171,9 @@ const Gallery = ({ open, images, close }) => {
       {images.length > 0 && (
         <ImageContainer open={open} close={closeAnim}>
           <CloseIcon onClick={closeGallery} />
-          <Image src={images[index]} alt="" />
+          {images.map((image, i) => (
+            <Image key={i} src={image} alt="" showing={i === index} />
+          ))}
           <ImageCount color="white">
             {index + 1} de {images.length}
           </ImageCount>
