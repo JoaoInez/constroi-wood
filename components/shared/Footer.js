@@ -164,7 +164,7 @@ const Footer = () => (
           <HammerIcon />
         </Logo>
         <P small color="lightGrey">
-          &copy; ConstroiWood Lda. 2019. Todos os direitos reservados.
+          &copy; ConstroiWood Lda. 2020. Todos os direitos reservados.
         </P>
       </Col>
     </Row>
