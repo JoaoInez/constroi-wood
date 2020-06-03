@@ -10,7 +10,7 @@ import {
   Section,
   SectionImage,
   SectionContent,
-  Divider
+  Divider,
 } from "../../ui";
 import Card from "./ServiceCard";
 import WideCard from "./ProjectCard";
@@ -24,7 +24,7 @@ import {
   BathIcon,
   PortfolioButton,
   ArrowRightIcon,
-  BottomAnchor
+  BottomAnchor,
 } from "./styles";
 
 const Homepage = () => {
@@ -70,53 +70,71 @@ const Homepage = () => {
         <Row maxWidth="1000px">
           <Col flex justify="center">
             <Card>
-              <ServiceIconWrapper>
-                <HammerIcon />
-              </ServiceIconWrapper>
-              <H h={4} align="center">
-                Carpintaria
-              </H>
-              {R.pathOr([], ["attributes", "services", "carpentry"])(
-                content
-              ).map((service, i) => (
-                <P align="center" key={i}>
-                  {service}
-                </P>
-              ))}
+              <div className="card-header">
+                <ServiceIconWrapper>
+                  <HammerIcon />
+                </ServiceIconWrapper>
+                <H h={4} align="center">
+                  Carpintaria
+                </H>
+              </div>
+              <Divider margin="0" width="80%" />
+              <div className="card-content">
+                {R.pathOr(
+                  [],
+                  ["attributes", "services", "carpentry"]
+                )(content).map((service, i) => (
+                  <P align="center" key={i}>
+                    {service}
+                  </P>
+                ))}
+              </div>
             </Card>
           </Col>
           <Col flex justify="center">
             <Card>
-              <ServiceIconWrapper>
-                <PaintRollerIcon />
-              </ServiceIconWrapper>
-              <H h={4} align="center">
-                Pinturas
-              </H>
-              {R.pathOr([], ["attributes", "services", "painting"])(
-                content
-              ).map((service, i) => (
-                <P align="center" key={i}>
-                  {service}
-                </P>
-              ))}
+              <div className="card-header">
+                <ServiceIconWrapper>
+                  <PaintRollerIcon />
+                </ServiceIconWrapper>
+                <H h={4} align="center">
+                  Pinturas
+                </H>
+              </div>
+              <Divider margin="0" width="80%" />
+              <div className="card-content">
+                {R.pathOr(
+                  [],
+                  ["attributes", "services", "painting"]
+                )(content).map((service, i) => (
+                  <P align="center" key={i}>
+                    {service}
+                  </P>
+                ))}
+              </div>
             </Card>
           </Col>
           <Col flex justify="center">
             <Card>
-              <ServiceIconWrapper>
-                <BathIcon />
-              </ServiceIconWrapper>
-              <H h={4} align="center">
-                Remodelações
-              </H>
-              {R.pathOr([], ["attributes", "services", "remodeling"])(
-                content
-              ).map((service, i) => (
-                <P align="center" key={i}>
-                  {service}
-                </P>
-              ))}
+              <div className="card-header">
+                <ServiceIconWrapper>
+                  <BathIcon />
+                </ServiceIconWrapper>
+                <H h={4} align="center">
+                  Remodelações
+                </H>
+              </div>
+              <Divider margin="0" width="80%" />
+              <div className="card-content">
+                {R.pathOr(
+                  [],
+                  ["attributes", "services", "remodeling"]
+                )(content).map((service, i) => (
+                  <P align="center" key={i}>
+                    {service}
+                  </P>
+                ))}
+              </div>
             </Card>
           </Col>
         </Row>
@@ -143,7 +161,7 @@ const Homepage = () => {
             "attributes",
             "projects",
             "project1",
-            "description"
+            "description",
           ])(content)}
         />
         <WideCard
@@ -157,7 +175,7 @@ const Homepage = () => {
             "attributes",
             "projects",
             "project2",
-            "description"
+            "description",
           ])(content)}
         />
         <Link href="/portfolio" as="/portfolio">

@@ -1,7 +1,7 @@
 const queries = {
   mobile: "(max-width: 480px)",
   laptop: "(min-width: 480px) and (max-width: 768px)",
-  desktop: "(min-width: 768px)"
+  desktop: "(min-width: 768px)",
 };
 
 const theme = {
@@ -15,7 +15,8 @@ const theme = {
   darkGrey: "#454545",
   lightGrey: "#F7FFF7",
   lightShadow: "#F0F1F2",
-  media: queries
+  transparentWhite: "rgba(255, 255, 255, 0.6)",
+  media: queries,
 };
 
 export default theme;

@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     cursor: pointer;
   }
+
+  textarea {
+    font-family: inherit;
+  }
 `;
 
 export default GlobalStyle;

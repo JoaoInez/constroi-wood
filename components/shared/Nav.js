@@ -10,12 +10,13 @@ const Navbar = styled.header`
   position: fixed;
   width: 100%;
   top: 0;
-  box-shadow: 0 2px 8px ${({ theme }) => theme.lightShadow};
+  box-shadow: 0 2px 4px ${({ theme }) => theme.lightShadow};
   z-index: 2;
 `;
 
 const Container = styled(Row)`
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.transparentWhite};
+  backdrop-filter: blur(4px);
 `;
 
 const HammerIcon = styled(Hammer)`
