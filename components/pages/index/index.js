@@ -40,7 +40,7 @@ const Homepage = () => {
   return (
     <>
       <Section height="calc(100vh - 73px)" bgColor="black" padding={0} relative>
-        <SectionImage url="/static/kitchen.jpg" />
+        <SectionImage url="/kitchen.jpg" />
         <SectionContent margin>
           <Title color="white">
             {R.pathOr("", ["attributes", "main", "title"])(content)}
@@ -140,7 +140,7 @@ const Homepage = () => {
         </Row>
       </Section>
       <Section height="200px" bgColor="black" padding={0} relative>
-        <SectionImage url="/static/carpenter-stock.jpg" />
+        <SectionImage url="/carpenter-stock.jpg" />
         <SectionContent margin>
           <P color="white" width="500px">
             <i>{R.pathOr("", ["attributes", "quote"])(content)}</i>
