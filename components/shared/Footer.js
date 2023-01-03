@@ -115,6 +115,7 @@ const Footer = () => (
             <Info>
               <PhoneIcon />
               <P color="white">+351 926 794 607</P>
+              <P color="white">Chamada para a rede móvel nacional</P>
             </Info>
           </Col>
         </Row>
@@ -164,7 +165,7 @@ const Footer = () => (
           <HammerIcon />
         </Logo>
         <P small color="lightGrey">
-          &copy; ConstroiWood Lda. 2020. Todos os direitos reservados.
+          &copy; ConstroiWood Lda. 2022. Todos os direitos reservados.
         </P>
       </Col>
     </Row>
