@@ -114,8 +114,10 @@ const Footer = () => (
             </Info>
             <Info>
               <PhoneIcon />
-              <P color="white">+351 926 794 607</P>
-              <P color="white">Chamada para a rede móvel nacional</P>
+              <div>
+                <P color="white">+351 926 794 607</P>
+                <P color="white">Chamada para a rede móvel nacional</P>
+              </div>
             </Info>
           </Col>
         </Row>
