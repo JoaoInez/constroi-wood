@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
-import { Bath } from "styled-icons/fa-solid/Bath";
-import { PaintRoller } from "styled-icons/fa-solid/PaintRoller";
-import { Hammer } from "styled-icons/fa-solid/Hammer";
-import { LongArrowAltRight } from "styled-icons/fa-solid/LongArrowAltRight";
-import { LongArrowAltDown } from "styled-icons/fa-solid/LongArrowAltDown";
+import { Bath } from "@styled-icons/fa-solid/Bath";
+import { PaintRoller } from "@styled-icons/fa-solid/PaintRoller";
+import { Hammer } from "@styled-icons/fa-solid/Hammer";
+import { LongArrowAltRight } from "@styled-icons/fa-solid/LongArrowAltRight";
+import { LongArrowAltDown } from "@styled-icons/fa-solid/LongArrowAltDown";
 import { H, P, Button } from "../../ui";
 
 const Title = styled(H)`

@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { Hammer } from "styled-icons/fa-solid/Hammer";
-import { At } from "styled-icons/boxicons-regular/At";
-import { Phone } from "styled-icons/boxicons-regular/Phone";
+import { Hammer } from "@styled-icons/fa-solid/Hammer";
+import { At } from "@styled-icons/boxicons-regular/At";
+import { Phone } from "@styled-icons/boxicons-regular/Phone";
 import { P, Row, Col, Button, H, Divider } from "../ui";
 
 const SFooter = styled.footer`

@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import styled from "styled-components";
-import { Hammer } from "styled-icons/fa-solid/Hammer";
-import { PrimitiveDot } from "styled-icons/octicons/PrimitiveDot";
+import { Hammer } from "@styled-icons/fa-solid/Hammer";
+import { PrimitiveDot } from "@styled-icons/octicons/PrimitiveDot";
 import { Row, Col, H, P } from "../ui";
 
 const Navbar = styled.header`

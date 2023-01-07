@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { Close } from "styled-icons/material/Close";
-import { KeyboardArrowLeft } from "styled-icons/material/KeyboardArrowLeft";
-import { KeyboardArrowRight } from "styled-icons/material/KeyboardArrowRight";
+import { Close } from "@styled-icons/material/Close";
+import { KeyboardArrowLeft } from "@styled-icons/material/KeyboardArrowLeft";
+import { KeyboardArrowRight } from "@styled-icons/material/KeyboardArrowRight";
 import { P } from "../../ui";
 
 const Wrapper = styled.div`
