@@ -3,7 +3,7 @@ import Link from "next/link";
 import { withRouter } from "next/router";
 import styled from "styled-components";
 import { Hammer } from "@styled-icons/fa-solid/Hammer";
-import { PrimitiveDot } from "@styled-icons/octicons/PrimitiveDot";
+import { Dot } from "@styled-icons/bootstrap/Dot";
 import { Row, Col, H, P } from "../ui";
 
 const Navbar = styled.header`
@@ -55,7 +55,7 @@ const LogoLink = styled.a`
   }
 `;
 
-const DotIcon = styled(PrimitiveDot)`
+const DotIcon = styled(Dot)`
   width: 5px;
   margin: 0 20px;
 `;
